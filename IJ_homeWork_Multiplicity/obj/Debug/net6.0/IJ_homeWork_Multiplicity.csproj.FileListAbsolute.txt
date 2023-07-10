@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\bin\Debug\net6.0\IJ_homeWork_Multiplicity.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\bin\Debug\net6.0\IJ_homeWork_Multiplicity.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\bin\Debug\net6.0\IJ_homeWork_Multiplicity.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\bin\Debug\net6.0\IJ_homeWork_Multiplicity.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\bin\Debug\net6.0\IJ_homeWork_Multiplicity.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\refint\IJ_homeWork_Multiplicity.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\IJ_homeWork_Multiplicity.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Multiplicity\obj\Debug\net6.0\ref\IJ_homeWork_Multiplicity.dll

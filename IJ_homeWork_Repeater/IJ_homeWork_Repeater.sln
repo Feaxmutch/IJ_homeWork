@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJ_homeWork_Repeater", "IJ_homeWork_Repeater.csproj", "{F002A435-3D45-4C47-8DA1-0EAC076BC036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F002A435-3D45-4C47-8DA1-0EAC076BC036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F002A435-3D45-4C47-8DA1-0EAC076BC036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F002A435-3D45-4C47-8DA1-0EAC076BC036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F002A435-3D45-4C47-8DA1-0EAC076BC036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAEEB331-DF20-4622-8EFB-D0AE54470CC4}
+	EndGlobalSection
+EndGlobal

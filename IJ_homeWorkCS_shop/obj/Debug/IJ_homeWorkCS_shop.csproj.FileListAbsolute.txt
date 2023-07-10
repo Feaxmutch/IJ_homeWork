@@ -1,0 +1,8 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\bin\Debug\IJ_homeWorkCS_shop.exe.config
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\bin\Debug\IJ_homeWorkCS_shop.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\bin\Debug\IJ_homeWorkCS_shop.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\obj\Debug\IJ_homeWorkCS_shop.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\obj\Debug\IJ_homeWorkCS_shop.csproj.SuggestedBindingRedirects.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\obj\Debug\IJ_homeWorkCS_shop.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\obj\Debug\IJ_homeWorkCS_shop.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWorkCS_shop\obj\Debug\IJ_homeWorkCS_shop.pdb

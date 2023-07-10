@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\bin\Debug\net6.0\IJ_homeWork_Repeater.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\bin\Debug\net6.0\IJ_homeWork_Repeater.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\bin\Debug\net6.0\IJ_homeWork_Repeater.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\bin\Debug\net6.0\IJ_homeWork_Repeater.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\bin\Debug\net6.0\IJ_homeWork_Repeater.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\refint\IJ_homeWork_Repeater.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\IJ_homeWork_Repeater.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Repeater\obj\Debug\net6.0\ref\IJ_homeWork_Repeater.dll

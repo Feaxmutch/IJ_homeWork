@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\bin\Debug\net6.0\IJ_homeWork_frame.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\bin\Debug\net6.0\IJ_homeWork_frame.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\bin\Debug\net6.0\IJ_homeWork_frame.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\bin\Debug\net6.0\IJ_homeWork_frame.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\bin\Debug\net6.0\IJ_homeWork_frame.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\refint\IJ_homeWork_frame.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\IJ_homeWork_frame.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_frame\obj\Debug\net6.0\ref\IJ_homeWork_frame.dll

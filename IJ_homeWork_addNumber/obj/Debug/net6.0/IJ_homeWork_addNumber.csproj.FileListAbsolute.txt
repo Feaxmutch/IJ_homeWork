@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\bin\Debug\net6.0\IJ_homeWork_addNumber.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\bin\Debug\net6.0\IJ_homeWork_addNumber.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\bin\Debug\net6.0\IJ_homeWork_addNumber.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\bin\Debug\net6.0\IJ_homeWork_addNumber.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\bin\Debug\net6.0\IJ_homeWork_addNumber.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\refint\IJ_homeWork_addNumber.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\IJ_homeWork_addNumber.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_addNumber\obj\Debug\net6.0\ref\IJ_homeWork_addNumber.dll

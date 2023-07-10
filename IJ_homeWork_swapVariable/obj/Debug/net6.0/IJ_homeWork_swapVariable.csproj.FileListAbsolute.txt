@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\bin\Debug\net6.0\IJ_homeWork_swapVariable.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\bin\Debug\net6.0\IJ_homeWork_swapVariable.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\bin\Debug\net6.0\IJ_homeWork_swapVariable.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\bin\Debug\net6.0\IJ_homeWork_swapVariable.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\bin\Debug\net6.0\IJ_homeWork_swapVariable.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\refint\IJ_homeWork_swapVariable.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\IJ_homeWork_swapVariable.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_swapVariable\obj\Debug\net6.0\ref\IJ_homeWork_swapVariable.dll

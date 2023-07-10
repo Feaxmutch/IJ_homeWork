@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\bin\Debug\net6.0\IJ_homeWork_RPGFight.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\bin\Debug\net6.0\IJ_homeWork_RPGFight.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\bin\Debug\net6.0\IJ_homeWork_RPGFight.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\bin\Debug\net6.0\IJ_homeWork_RPGFight.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\bin\Debug\net6.0\IJ_homeWork_RPGFight.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\refint\IJ_homeWork_RPGFight.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\IJ_homeWork_RPGFight.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_RPGFight\obj\Debug\net6.0\ref\IJ_homeWork_RPGFight.dll

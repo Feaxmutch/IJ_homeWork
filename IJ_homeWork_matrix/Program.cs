@@ -11,6 +11,7 @@ namespace IJ_homeWork_matrix
             int maxNumber = 9;
             int[,] numbers = new int[10, 10];
             int highestNumber = minNumber;
+            int newNumber = 0;
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -39,7 +40,7 @@ namespace IJ_homeWork_matrix
                 {
                     if (numbers[i,j] == highestNumber)
                     {
-                        numbers[i, j] = 0;
+                        numbers[i, j] = newNumber;
                     }
 
                     Console.Write(numbers[i, j]);

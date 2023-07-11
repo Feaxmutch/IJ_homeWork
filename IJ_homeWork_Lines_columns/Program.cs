@@ -8,10 +8,10 @@
             int minNumber = 1;
             int maxNumber = 9;
             int[,] numbers = new int[3, 3];
-            int selectedLine = 1;
-            int selectedColum = 0;
+            int selectedLine = 2;
+            int selectedColum = 1;
             int lineSum = 0;
-            int columnProduct = 0;
+            int columnProduct = 1;
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -28,31 +28,17 @@
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
-                if (i == 0)
-                {
-                    columnProduct = numbers[i, selectedColum];
-                }
-                else
-                {
-                    columnProduct *= numbers[i, selectedColum];
-                }
+                columnProduct *= numbers[i, selectedColum - 1];
             }
 
-            Console.WriteLine($"Произведение столбца под индексом {selectedColum}: {columnProduct}");
+            Console.WriteLine($"Произведение столбца {selectedColum}: {columnProduct}");
 
             for (int i = 0; i < numbers.GetLength(1); i++)
             {
-                if (i == 0)
-                {
-                    lineSum = numbers[selectedLine, i];
-                }
-                else
-                {
-                    lineSum += numbers[selectedLine, i];
-                }
+               lineSum += numbers[selectedLine - 1, i];
             }
 
-            Console.WriteLine($"Cумма строки под индексом {selectedLine}: {lineSum}");
+            Console.WriteLine($"Cумма строки {selectedLine}: {lineSum}");
         }
     }
 }

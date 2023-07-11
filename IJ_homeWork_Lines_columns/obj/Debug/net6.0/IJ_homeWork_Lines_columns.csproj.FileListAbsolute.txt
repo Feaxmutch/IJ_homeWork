@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\bin\Debug\net6.0\IJ_homeWork_Lines_columns.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\bin\Debug\net6.0\IJ_homeWork_Lines_columns.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\bin\Debug\net6.0\IJ_homeWork_Lines_columns.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\bin\Debug\net6.0\IJ_homeWork_Lines_columns.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\bin\Debug\net6.0\IJ_homeWork_Lines_columns.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\refint\IJ_homeWork_Lines_columns.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\IJ_homeWork_Lines_columns.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Lines_columns\obj\Debug\net6.0\ref\IJ_homeWork_Lines_columns.dll

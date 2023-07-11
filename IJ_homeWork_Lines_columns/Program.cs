@@ -35,7 +35,7 @@
 
             for (int i = 0; i < numbers.GetLength(1); i++)
             {
-               lineSum += numbers[selectedLine - 1, i];
+                lineSum += numbers[selectedLine - 1, i];
             }
 
             Console.WriteLine($"Cумма строки {selectedLine}: {lineSum}");

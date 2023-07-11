@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\bin\Debug\net6.0\IJ_homeWork_matrix.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\bin\Debug\net6.0\IJ_homeWork_matrix.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\bin\Debug\net6.0\IJ_homeWork_matrix.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\bin\Debug\net6.0\IJ_homeWork_matrix.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\bin\Debug\net6.0\IJ_homeWork_matrix.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\refint\IJ_homeWork_matrix.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\IJ_homeWork_matrix.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_matrix\obj\Debug\net6.0\ref\IJ_homeWork_matrix.dll

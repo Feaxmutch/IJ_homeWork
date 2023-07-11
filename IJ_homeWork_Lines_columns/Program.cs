@@ -9,7 +9,7 @@
             int maxNumber = 9;
             int[,] numbers = new int[3, 3];
             int selectedLine = 2;
-            int selectedColum = 1;
+            int selectedColumn = 1;
             int lineSum = 0;
             int columnProduct = 1;
 
@@ -28,10 +28,10 @@
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
-                columnProduct *= numbers[i, selectedColum - 1];
+                columnProduct *= numbers[i, selectedColumn - 1];
             }
 
-            Console.WriteLine($"Произведение столбца {selectedColum}: {columnProduct}");
+            Console.WriteLine($"Произведение столбца {selectedColumn}: {columnProduct}");
 
             for (int i = 0; i < numbers.GetLength(1); i++)
             {

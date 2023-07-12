@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\bin\Debug\net6.0\IJ_homeWork_localMax.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\bin\Debug\net6.0\IJ_homeWork_localMax.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\bin\Debug\net6.0\IJ_homeWork_localMax.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\bin\Debug\net6.0\IJ_homeWork_localMax.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\bin\Debug\net6.0\IJ_homeWork_localMax.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\refint\IJ_homeWork_localMax.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\IJ_homeWork_localMax.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_localMax\obj\Debug\net6.0\ref\IJ_homeWork_localMax.dll

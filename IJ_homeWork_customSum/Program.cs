@@ -8,8 +8,6 @@
             const string CommandExit = "exit";
 
             int[] numbers = new int[0];
-            int[] numbersBuffer;
-            int sumOfNumbers;
             string userInput = string.Empty;
             bool isWorking = true;
 
@@ -22,7 +20,7 @@
                 switch (userInput)
                 {
                     default:
-                        numbersBuffer = new int[numbers.Length];
+                        int[] numbersBuffer = new int[numbers.Length];
 
                         for (int i = 0; i < numbersBuffer.Length; i++)
                         {
@@ -39,7 +37,7 @@
                         break;
 
                     case CommandSum:
-                        sumOfNumbers = 0;
+                        int sumOfNumbers = 0;
 
                         for (int i = 0; i < numbers.Length; i++)
                         {
@@ -47,7 +45,6 @@
                         }
 
                         Console.WriteLine($"Сумма введенных ранее чисел: {sumOfNumbers}");
-                        numbers = new int[0];
                         Console.ReadKey();
                         break;
 

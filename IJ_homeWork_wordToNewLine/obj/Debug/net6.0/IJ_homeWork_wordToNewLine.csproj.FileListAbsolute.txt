@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\bin\Debug\net6.0\IJ_homeWork_wordToNewLine.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\bin\Debug\net6.0\IJ_homeWork_wordToNewLine.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\bin\Debug\net6.0\IJ_homeWork_wordToNewLine.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\bin\Debug\net6.0\IJ_homeWork_wordToNewLine.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\bin\Debug\net6.0\IJ_homeWork_wordToNewLine.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\refint\IJ_homeWork_wordToNewLine.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\IJ_homeWork_wordToNewLine.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_wordToNewLine\obj\Debug\net6.0\ref\IJ_homeWork_wordToNewLine.dll

@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\bin\Debug\net6.0\IJ_homeWork_numberTimes.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\bin\Debug\net6.0\IJ_homeWork_numberTimes.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\bin\Debug\net6.0\IJ_homeWork_numberTimes.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\bin\Debug\net6.0\IJ_homeWork_numberTimes.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\bin\Debug\net6.0\IJ_homeWork_numberTimes.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\refint\IJ_homeWork_numberTimes.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\IJ_homeWork_numberTimes.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberTimes\obj\Debug\net6.0\ref\IJ_homeWork_numberTimes.dll

@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
+            char separationChar = ' ';
             string fontPangram = "Съешь ещё этих мягких французских булок, да выпей чаю.";
-            string[] words = fontPangram.Split(' ');
+            string[] words = fontPangram.Split(separationChar);
 
             foreach (string word in words)
             {

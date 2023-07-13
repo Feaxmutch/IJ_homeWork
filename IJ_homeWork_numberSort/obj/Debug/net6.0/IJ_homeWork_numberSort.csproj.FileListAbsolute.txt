@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\bin\Debug\net6.0\IJ_homeWork_numberSort.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\bin\Debug\net6.0\IJ_homeWork_numberSort.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\bin\Debug\net6.0\IJ_homeWork_numberSort.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\bin\Debug\net6.0\IJ_homeWork_numberSort.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\bin\Debug\net6.0\IJ_homeWork_numberSort.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\refint\IJ_homeWork_numberSort.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\IJ_homeWork_numberSort.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_numberSort\obj\Debug\net6.0\ref\IJ_homeWork_numberSort.dll

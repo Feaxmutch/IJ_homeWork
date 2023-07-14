@@ -8,38 +8,30 @@
             int minNumber = 0;
             int maxNumber = 2;
             int[] numbers = new int[30];
-            int repeatTimes = 1;
-            int maxRepeatTimes = 1;
-            int hightestRepeatingNumber = 0;
+            int repeatsCount = 1;
+            int maxRepeatsCount = 1;
+            int repeatableNumber = numbers[0];
 
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = random.Next(minNumber, maxNumber + 1);
             }
 
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 1; i < numbers.Length; i++)
             {
-                if (i == 0)
+                if (numbers[i] == numbers[i - 1])
                 {
-                    repeatTimes = 1;
-                    hightestRepeatingNumber = numbers[i];
+                    repeatsCount++;
                 }
                 else
                 {
-                    if (numbers[i] == numbers[i - 1])
-                    {
-                        repeatTimes++;
-                    }
-                    else
-                    {
-                        repeatTimes = 1;
-                    }
+                    repeatsCount = 1;
                 }
 
-                if (repeatTimes > maxRepeatTimes)
+                if (repeatsCount > maxRepeatsCount)
                 {
-                    maxRepeatTimes = repeatTimes;
-                    hightestRepeatingNumber = numbers[i];
+                    maxRepeatsCount = repeatsCount;
+                    repeatableNumber = numbers[i];
                 }
             }
 
@@ -49,7 +41,7 @@
             }
 
             Console.WriteLine();
-            Console.WriteLine($"число {hightestRepeatingNumber} повторилось {maxRepeatTimes} раз, что является наибольшим числом повторений.");
+            Console.WriteLine($"число {repeatableNumber} повторилось {maxRepeatsCount} раз, что является наибольшим числом повторений.");
         }
     }
 }

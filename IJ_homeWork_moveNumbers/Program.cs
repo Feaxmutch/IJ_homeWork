@@ -19,8 +19,7 @@
                 Console.Write($"{number} ");
             }
 
-            Console.WriteLine();
-            Console.WriteLine("\nНа сколько позиций влево вы хотите сдвинуть эти числа?");
+            Console.WriteLine("\n\n" + "На сколько позиций влево вы хотите сдвинуть эти числа?");
 
             int numberMoves = Convert.ToInt32(Console.ReadLine());
 

@@ -11,7 +11,7 @@
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = random.Next(minNumber, maxNumber);
+                numbers[i] = random.Next(minNumber, maxNumber + 1);
             }
 
             foreach (var number in numbers)

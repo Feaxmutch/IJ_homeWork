@@ -11,7 +11,7 @@
             {
                 for (int j = 0; j < namesBuffer.GetLength(1); j++)
                 {
-                    namesBuffer[i,j] = names[i,j];
+                    namesBuffer[i, j] = names[i, j];
                 }
                 postsBuffer[i] = posts[i];
             }
@@ -28,7 +28,7 @@
             {
                 for (int j = 0; j < namesBuffer.GetLength(1); j++)
                 {
-                    names[i,j] = namesBuffer[i,j];
+                    names[i, j] = namesBuffer[i, j];
                 }
                 posts[i] = postsBuffer[i];
             }
@@ -36,7 +36,7 @@
 
         static void WriteDosser(string[,] names, string[] posts, int dosserNumber)
         {
-            Console.WriteLine($"{dosserNumber}. {names[dosserNumber - 1,0]} {names[dosserNumber - 1, 1]} {names[dosserNumber - 1, 2]} - {posts[dosserNumber - 1]}");
+            Console.WriteLine($"{dosserNumber}. {names[dosserNumber - 1, 0]} {names[dosserNumber - 1, 1]} {names[dosserNumber - 1, 2]} - {posts[dosserNumber - 1]}");
         }
 
         static void DeleteDosser(ref string[,] names, ref string[] posts, int dosserNumber)
@@ -82,9 +82,33 @@
             }
         }
 
-        static void FindDosserBySurname(ref string[,] names, ref string[] posts, string surname)
+        static int[] FindDosserBySurname(ref string[,] names, string surname)
         {
+            int[] foundedIndexes = new int[0];
+            int[] indexesBuffer = new int[foundedIndexes.Length];
 
+            for (int i = 0; i < names.GetLength(0); i++)
+            {
+                if (names[i, 0].Remove(surname.Length).ToLower() == surname.ToLower())
+                {
+                    indexesBuffer = new int[foundedIndexes.Length];
+
+                    for (int j = 0; j < indexesBuffer.Length; j++)
+                    {
+                        indexesBuffer[j] = foundedIndexes[j];
+                    }
+
+                    foundedIndexes = new int[foundedIndexes.Length + 1];
+                    foundedIndexes[foundedIndexes.Length - 1] = i;
+
+                    for (int j = 0; j < indexesBuffer.Length; j++)
+                    {
+                        foundedIndexes[j] = indexesBuffer[j];
+                    }
+                }
+            }
+
+            return foundedIndexes;
         }
 
         static void Main()
@@ -100,11 +124,6 @@
             string[] userInput = new string[5];
             bool isWorking = true;
 
-            AddDossier(ref names, ref posts, "Данил", "Миншаехов", "Рустамович", "программист");             // Временные методы. Нужно удалить позже.
-            AddDossier(ref names, ref posts, "Александр", "Огурцов", "Андреевич", "таксист");             
-            AddDossier(ref names, ref posts, "Тимофей", "Сахаров", "Григоривич", "дизайнер");
-            AddDossier(ref names, ref posts, "Сергей", "Смежнов", "Петрович", "Танкист");
-            DeleteDosser(ref names, ref posts, 2);
             while (isWorking)
             {
                 Console.Clear();
@@ -153,6 +172,27 @@
                         }
 
                         Console.ReadKey();
+                        break;
+
+                    case MenuFindDosserBySurname:
+                        Console.Clear();
+                        Console.CursorVisible = true;
+
+                        Console.Write("Введите начало фамилии, или полную фамилию: ");
+                        userInput[0] = Console.ReadLine();
+
+                        int[] indexes = FindDosserBySurname(ref names, userInput[0]);
+
+                        for (int i = 0; i < indexes.Length; i++)
+                        {
+                            WriteDosser(names, posts, indexes[i] + 1);
+                        }
+
+                        Console.ReadKey();
+                        break;
+
+                    case CommandExit:
+                        isWorking = false;
                         break;
                 }
             }

@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\bin\Debug\net6.0\IJ_homeWork_healthBar.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\bin\Debug\net6.0\IJ_homeWork_healthBar.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\bin\Debug\net6.0\IJ_homeWork_healthBar.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\bin\Debug\net6.0\IJ_homeWork_healthBar.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\bin\Debug\net6.0\IJ_homeWork_healthBar.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\refint\IJ_homeWork_healthBar.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\IJ_homeWork_healthBar.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_healthBar\obj\Debug\net6.0\ref\IJ_homeWork_healthBar.dll

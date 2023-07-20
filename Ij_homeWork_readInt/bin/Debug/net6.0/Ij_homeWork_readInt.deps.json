@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Ij_homeWork_readInt/1.0.0": {
+        "runtime": {
+          "Ij_homeWork_readInt.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ij_homeWork_readInt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

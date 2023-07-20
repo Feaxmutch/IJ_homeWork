@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\bin\Debug\net6.0\Ij_homeWork_readInt.exe
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\bin\Debug\net6.0\Ij_homeWork_readInt.deps.json
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\bin\Debug\net6.0\Ij_homeWork_readInt.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\bin\Debug\net6.0\Ij_homeWork_readInt.dll
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\bin\Debug\net6.0\Ij_homeWork_readInt.pdb
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.dll
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\refint\Ij_homeWork_readInt.dll
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.pdb
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\Ij_homeWork_readInt.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\Ij_homeWork_readInt\obj\Debug\net6.0\ref\Ij_homeWork_readInt.dll

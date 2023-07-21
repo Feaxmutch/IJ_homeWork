@@ -1,4 +1,6 @@
-﻿namespace IJ_homeWork_Shuffle
+﻿using System;
+
+namespace IJ_homeWork_Shuffle
 {
     internal class Program
     {
@@ -7,19 +9,12 @@
             int[] array = GenerateArray(10, 0, 9);
 
             Console.WriteLine("Сгенерированый массив:");
+            WriteNumbers(array);
 
-            foreach (int number in array)
-            {
-                Console.Write($"{number} ");
-            }
+            Shuffle(array, 20);
 
-            array = Shuffle(array, 20);
             Console.WriteLine("\n\n" + "Перемешанный массив:");
-
-            foreach (int number in array)
-            {
-                Console.Write($"{number} ");
-            }
+            WriteNumbers(array);
 
             Console.ReadKey();
         }
@@ -37,39 +32,40 @@
             return array;
         }
 
-        static int[] Shuffle(int[] array, int swipeTimes)
+        static void Shuffle(int[] array, int swipeTimes)
         {
             Random random = new Random();
 
             for (int i = 0; i < swipeTimes; i++)
             {
-                array = SwipeElements(array, random.Next(0, array.Length), random.Next(0, array.Length));
-            }
+                int numberBuffer;
+                int firstIndex = random.Next(0, array.Length);
+                int secondIndex = random.Next(0, array.Length);
 
-            return array;
+                if (firstIndex == secondIndex)
+                {
+                    if (secondIndex < array.Length - 1)
+                    {
+                        secondIndex = firstIndex + 1;
+                    }
+                    else
+                    {
+                        secondIndex = firstIndex - 1;
+                    }
+                }
+
+                numberBuffer = array[firstIndex];
+                array[firstIndex] = array[secondIndex];
+                array[secondIndex] = numberBuffer;
+            }
         }
 
-        static int[] SwipeElements(int[] array, int firstIndex, int secondIndex)
+        static void WriteNumbers(int[] numbers)
         {
-            int numberBuffer;
-
-            if (firstIndex == secondIndex)
+            foreach (int number in numbers)
             {
-                if (secondIndex < array.Length - 1)
-                {
-                    secondIndex = firstIndex + 1;
-                }
-                else
-                {
-                    secondIndex = firstIndex - 1;
-                }
+                Console.Write($"{number} ");
             }
-
-            numberBuffer = array[firstIndex];
-            array[firstIndex] = array[secondIndex];
-            array[secondIndex] = numberBuffer;
-
-            return array;
         }
     }
 }

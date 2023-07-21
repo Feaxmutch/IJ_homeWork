@@ -38,7 +38,7 @@
                         break;
 
                     case MenuDeleteDosser:
-                        DeleteDossier(ref names,ref posts);
+                        DeleteDossier(ref names, ref posts);
                         break;
 
                     case MenuFindDosserBySurname:
@@ -73,8 +73,8 @@
 
             Console.CursorVisible = false;
 
-            AddElement(names, $"{userInputs[1]} {userInputs[0]} {userInputs[2]}");
-            AddElement(posts, userInputs[3]);
+            names = AddElement(names, $"{userInputs[1]} {userInputs[0]} {userInputs[2]}");
+            posts = AddElement(posts, userInputs[3]);
 
             Console.WriteLine("Добавленно следющее досье:");
             WriteDossier(names, posts, names.Length);
@@ -85,7 +85,7 @@
             Console.WriteLine($"{dosserNumber}. {names[dosserNumber - 1]}  - {posts[dosserNumber - 1]}");
         }
 
-        static void DeleteDossier(ref string[] names, ref string[] posts )
+        static void DeleteDossier(ref string[] names, ref string[] posts)
         {
             string[] namesBuffer = new string[names.GetLength(0) - 1];
             string[] postsBuffer = new string[posts.Length - 1];
@@ -95,8 +95,8 @@
             Console.Write("\nВведите номер досье, которое хотите удалить ");
             int dosserNumber = Convert.ToInt32(Console.ReadLine());
 
-            RemoveElement(names, dosserNumber - 1);
-            RemoveElement(posts, dosserNumber - 1);
+            names = RemoveElement(names, dosserNumber - 1);
+            posts = RemoveElement(posts, dosserNumber - 1);
         }
 
         static void FindDossierBySurname(string[] names, string[] posts)
@@ -140,7 +140,7 @@
             Console.ReadKey();
         }
 
-        static string[] AddElement(string[] array , string newElement)
+        static string[] AddElement(string[] array, string newElement)
         {
             string[] newArray = new string[array.Length + 1];
 
@@ -149,7 +149,7 @@
                 newArray[i] = array[i];
             }
 
-            newArray[array.Length - 1] = newElement;
+            newArray[newArray.Length - 1] = newElement;
             return newArray;
         }
 

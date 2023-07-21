@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\bin\Debug\net6.0\IJ_homeWork_Shuffle.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\bin\Debug\net6.0\IJ_homeWork_Shuffle.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\bin\Debug\net6.0\IJ_homeWork_Shuffle.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\bin\Debug\net6.0\IJ_homeWork_Shuffle.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\bin\Debug\net6.0\IJ_homeWork_Shuffle.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\refint\IJ_homeWork_Shuffle.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\IJ_homeWork_Shuffle.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_Shuffle\obj\Debug\net6.0\ref\IJ_homeWork_Shuffle.dll

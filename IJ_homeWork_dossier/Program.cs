@@ -12,7 +12,7 @@
 
             string[] names = new string[0];
             string[] posts = new string[names.Length];
-            string[] userInput = new string[5];
+            string userInput = string.Empty;
             bool isWorking = true;
 
             while (isWorking)
@@ -25,9 +25,9 @@
                                   $"\n{MenuFindDosserBySurname.Remove(0, 1)}) поиск по фамилии" +
                                   $"\n{CommandExit.Remove(0, 1)}) выход");
 
-                userInput[0] = Console.ReadKey(true).Key.ToString();
+                userInput = Console.ReadKey(true).Key.ToString();
 
-                switch (userInput[0])
+                switch (userInput)
                 {
                     case MenuAddDossier:
                         AddDossier(ref names, ref posts);
@@ -54,29 +54,27 @@
 
         static void AddDossier(ref string[] names, ref string[] posts)
         {
-            string[] namesBuffer = new string[names.GetLength(0)];
-            string[] postsBuffer = new string[posts.Length];
-            string[] userInput = new string[4];
+            string[] userInputs = new string[4];
 
             Console.Clear();
             Console.CursorVisible = true;
 
             Console.Write("Введите имя: ");
-            userInput[0] = Console.ReadLine();
+            userInputs[0] = Console.ReadLine();
 
             Console.Write("Введите фамилию: ");
-            userInput[1] = Console.ReadLine();
+            userInputs[1] = Console.ReadLine();
 
             Console.Write("Введите отчество: ");
-            userInput[2] = Console.ReadLine();
+            userInputs[2] = Console.ReadLine();
 
             Console.Write("Введите Должность: ");
-            userInput[3] = Console.ReadLine();
+            userInputs[3] = Console.ReadLine();
 
             Console.CursorVisible = false;
 
-            AddElement(ref names, $"{userInput[1]} {userInput[0]} {userInput[2]}");
-            AddElement(ref posts, userInput[3]);
+            AddElement(names, $"{userInputs[1]} {userInputs[0]} {userInputs[2]}");
+            AddElement(posts, userInputs[3]);
 
             Console.WriteLine("Добавленно следющее досье:");
             WriteDossier(names, posts, names.Length);
@@ -97,15 +95,15 @@
             Console.Write("\nВведите номер досье, которое хотите удалить ");
             int dosserNumber = Convert.ToInt32(Console.ReadLine());
 
-            RemoveElement(ref names, dosserNumber - 1);
-            RemoveElement(ref posts, dosserNumber - 1);
+            RemoveElement(names, dosserNumber - 1);
+            RemoveElement(posts, dosserNumber - 1);
         }
 
         static void FindDossierBySurname(string[] names, string[] posts)
         {
             string[] userInput = new string[1];
             char separator = ' ';
-            bool dossierFounded = false;
+            bool dossierIsFounded = false;
 
             Console.Clear();
             Console.CursorVisible = true;
@@ -118,11 +116,11 @@
                 if (names[i].Split(separator)[0].Remove(userInput[0].Length).ToLower() == userInput[0].ToLower())
                 {
                     WriteDossier(names, posts, i + 1);
-                    dossierFounded = true;
+                    dossierIsFounded = true;
                 }
             }
 
-            if (dossierFounded == false)
+            if (dossierIsFounded == false)
             {
                 Console.Write("Ни одно досье не найдено.");
             }
@@ -142,27 +140,22 @@
             Console.ReadKey();
         }
 
-        static void AddElement(ref string[] array , string newElement)
+        static string[] AddElement(string[] array , string newElement)
         {
-            string[] arrayBuffer = new string[array.Length];
+            string[] newArray = new string[array.Length + 1];
 
-            for (int i = 0; i < arrayBuffer.Length; i++)
+            for (int i = 0; i < newArray.Length - 1; i++)
             {
-                arrayBuffer[i] = array[i];
+                newArray[i] = array[i];
             }
 
-            array = new string[array.Length + 1];
-            array[array.Length - 1] = newElement;
-
-            for (int i = 0; i < arrayBuffer.Length; i++)
-            {
-                array[i] = arrayBuffer[i];
-            }
+            newArray[array.Length - 1] = newElement;
+            return newArray;
         }
 
-        static void RemoveElement(ref string[] array, int elementIndex)
+        static string[] RemoveElement(string[] array, int elementIndex)
         {
-            string[] arrayBuffer = new string[array.Length - 1];
+            string[] newArray = new string[array.Length - 1];
 
             array[elementIndex] = null;
 
@@ -171,17 +164,12 @@
                 array[i] = array[i + 1];
             }
 
-            for (int i = 0; i < arrayBuffer.Length; i++)
+            for (int i = 0; i < newArray.Length; i++)
             {
-                arrayBuffer[i] = array[i];
+                newArray[i] = array[i];
             }
 
-            array = new string[array.Length - 1];
-
-            for (int i = 0; i < arrayBuffer.Length; i++)
-            {
-                array[i] = arrayBuffer[i];
-            }
+            return newArray;
         }
     }
 }

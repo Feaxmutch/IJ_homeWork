@@ -11,7 +11,7 @@ namespace IJ_homeWork_Shuffle
             Console.WriteLine("Сгенерированый массив:");
             WriteNumbers(array);
 
-            Shuffle(array, 20);
+            Shuffle(array);
 
             Console.WriteLine("\n\n" + "Перемешанный массив:");
             WriteNumbers(array);
@@ -32,31 +32,20 @@ namespace IJ_homeWork_Shuffle
             return array;
         }
 
-        static void Shuffle(int[] array, int swipeTimes)
+        static void Shuffle(int[] array)
         {
             Random random = new Random();
+            int leftIndex = -1;
+            int rightIndex = 1;
 
-            for (int i = 0; i < swipeTimes; i++)
+            for (int i = 1; i < array.Length - 1; i++)
             {
                 int numberBuffer;
-                int firstIndex = random.Next(0, array.Length);
-                int secondIndex = random.Next(0, array.Length);
+                int adjacentIndex = random.Next(leftIndex, rightIndex + 1);
 
-                if (firstIndex == secondIndex)
-                {
-                    if (secondIndex < array.Length - 1)
-                    {
-                        secondIndex = firstIndex + 1;
-                    }
-                    else
-                    {
-                        secondIndex = firstIndex - 1;
-                    }
-                }
-
-                numberBuffer = array[firstIndex];
-                array[firstIndex] = array[secondIndex];
-                array[secondIndex] = numberBuffer;
+                numberBuffer = array[i];
+                array[i] = array[i + adjacentIndex];
+                array[i + adjacentIndex] = numberBuffer;
             }
         }
 

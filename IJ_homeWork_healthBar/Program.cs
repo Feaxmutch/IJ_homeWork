@@ -8,12 +8,12 @@
             int maxHealth = 150;
             int barLenght = 10;
 
-            WriteBar(health, maxHealth, barLenght, ConsoleColor.Green, ConsoleColor.Red);
+            DrawBar(health, maxHealth, barLenght, ConsoleColor.Green, ConsoleColor.Red);
 
             Console.ReadKey(true);
         }
 
-        static void WriteBar(int value, int maxValue, int lenght = 10, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
+        static void DrawBar(int value, int maxValue, int lenght = 10, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
         {
             char leftSide = '[';
             char rightSide = ']';

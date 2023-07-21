@@ -4,34 +4,23 @@
     {
         static void Main(string[] args)
         {
-            ReadNumber();
+            int parsedNumber = ReadNumber();
+            Console.WriteLine(parsedNumber);
         }
 
-        static void ReadNumber()
+        static int ReadNumber()
         {
-            bool parseIsSuccessful = false;
             string userInput = string.Empty;
             int result;
 
-            while (parseIsSuccessful == false)
+            while (int.TryParse(userInput, out result) == false)
             {
                 Console.Clear();
                 Console.Write("Введите число: ");
                 userInput = Console.ReadLine();
-
-                if (int.TryParse(userInput, out result))
-                {
-                    parseIsSuccessful = true;
-                    result = int.Parse(userInput);
-                    Console.WriteLine(result);
-                    Console.ReadKey();
-                }
-                else
-                {
-                    Console.WriteLine("Похоже вы ввели не число.");
-                    Console.ReadKey();
-                }
             }
+            
+            return result;
         }
     }
 }

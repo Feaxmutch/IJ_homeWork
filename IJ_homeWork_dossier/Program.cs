@@ -124,7 +124,7 @@
             bool dossierIsFounded = false;
             string[] surnames = new string[names.Length];
 
-            for (int i = 0; i < names.Length; i++)
+            for (int i = 0; i < surnames.Length; i++)
             {
                 surnames[i] = names[i].Split(separator)[0].ToLower();
             }
@@ -135,7 +135,7 @@
             Console.Write("Введите начало фамилии, или полную фамилию: ");
             userInput = Console.ReadLine();
 
-            for (int i = 0; i < names.Length; i++)
+            for (int i = 0; i < surnames.Length; i++)
             {
                 if (surnames[i].Contains(userInput.ToLower()))
                 {

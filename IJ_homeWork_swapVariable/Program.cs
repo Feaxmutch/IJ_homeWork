@@ -5,11 +5,11 @@
         static void Main(string[] args)
         {
             string firstName = "Чобитько";
-            string lastName = "Илья";     // Тот, что Муромец
+            string lastName = "Илья";
             Console.WriteLine($"{firstName} {lastName}");
-            string nameBufer = firstName;
+            string nameBuffer = firstName;
             firstName = lastName;
-            lastName = nameBufer;
+            lastName = nameBuffer;
             Console.WriteLine($"{firstName} {lastName}");
             Console.ReadKey();
         }

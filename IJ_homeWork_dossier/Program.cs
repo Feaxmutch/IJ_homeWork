@@ -119,7 +119,7 @@
 
         static void FindDossierBySurname(string[] names, string[] posts)
         {
-            string[] userInput = new string[1];
+            string userInput = string.Empty;
             char separator = ' ';
             bool dossierIsFounded = false;
 
@@ -127,17 +127,15 @@
             Console.CursorVisible = true;
 
             Console.Write("Введите начало фамилии, или полную фамилию: ");
-            userInput[0] = Console.ReadLine();
+            userInput = Console.ReadLine();
 
             for (int i = 0; i < names.Length; i++)
             {
-                if (userInput[0].Length <= names[i].Split(separator)[0].Length)
+                string surname = names[i].Split(separator)[0].ToLower();
+                if (surname.Contains(userInput.ToLower()))
                 {
-                    if (names[i].Split(separator)[0].Remove(userInput[0].Length).ToLower() == userInput[0].ToLower() || userInput[0].ToLower() == names[i].Split(separator)[0].ToLower())
-                    {
-                        WriteDossier(names, posts, i + 1);
-                        dossierIsFounded = true;
-                    }
+                    WriteDossier(names, posts, i + 1);
+                    dossierIsFounded = true;
                 }
             }
 

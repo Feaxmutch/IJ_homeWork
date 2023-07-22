@@ -4,47 +4,41 @@
     {
         static void Main(string[] args)
         {
-            int health = 60;
-            int maxHealth = 150;
-            int barLenght = 10;
+            float health = 40;
+            float mana = 23;
+            int healthBarLenght = 15;
+            int manaBarLenght = 10;
 
-            DrawBar(health, maxHealth, barLenght, ConsoleColor.Green, ConsoleColor.Red);
+            DrawBar(health, 0, 0, healthBarLenght, ConsoleColor.Green, ConsoleColor.Red);
+            DrawBar(mana, 0, 1, manaBarLenght, ConsoleColor.Blue, ConsoleColor.Red);
 
             Console.ReadKey(true);
         }
 
-        static void DrawBar(int value, int maxValue, int lenght = 10, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
+        static void DrawBar(float present, int X, int Y, float lenght, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
         {
             char leftSide = '[';
             char rightSide = ']';
             char downSide = '_';
             char bar = '#';
+            float maxPresent = 100;
             ConsoleColor defaltForegroundColor = Console.ForegroundColor;
 
-            if (value < 0)
-            {
-                value = 0;
-            }
-
-            if (maxValue < value)
-            {
-                maxValue = value;
-            }
-
             Console.ForegroundColor = frameColor;
-            Console.Write("\n" + leftSide);
+            Console.SetCursorPosition(X,Y);
+            Console.Write(leftSide);
             Console.ForegroundColor = barColor;
 
-            for (int i = 1; i <= value / (maxValue / lenght); i++)
+            for (int i = 1; i <= lenght; i++)
             {
-                Console.Write(bar);
-            }
-
-            Console.ForegroundColor = frameColor;
-
-            for (int i = value / (maxValue / lenght); i < lenght; i++)
-            {
-                Console.Write(downSide);
+                if (i <= present * (lenght / maxPresent))
+                {
+                    Console.Write(bar);
+                }
+                else
+                {
+                    Console.Write(downSide);
+                }
             }
 
             Console.ForegroundColor = frameColor;

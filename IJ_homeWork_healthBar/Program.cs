@@ -15,34 +15,33 @@
             Console.ReadKey(true);
         }
 
-        static void DrawBar(float present, int X, int Y, float lenght, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
+        static void DrawBar(float present, int positionX, int positionY, int length, ConsoleColor barColor = ConsoleColor.Red, ConsoleColor frameColor = ConsoleColor.White)
         {
-            char leftSide = '[';
-            char rightSide = ']';
-            char downSide = '_';
-            char bar = '#';
+            char leftSideOfFrame = '[';
+            char rightSideOfFrame = ']';
+            char emptyBarDivision = '_';
+            char barDivision = '#';
             float maxPresent = 100;
+            float lastDivisionOfBar = present * (length / maxPresent);
             ConsoleColor defaltForegroundColor = Console.ForegroundColor;
 
             Console.ForegroundColor = frameColor;
-            Console.SetCursorPosition(X,Y);
-            Console.Write(leftSide);
+            Console.SetCursorPosition(positionX, positionY);
+            Console.Write(leftSideOfFrame);
             Console.ForegroundColor = barColor;
 
-            for (int i = 1; i <= lenght; i++)
+            for (float i = 1; i <= lastDivisionOfBar; i++)
             {
-                if (i <= present * (lenght / maxPresent))
-                {
-                    Console.Write(bar);
-                }
-                else
-                {
-                    Console.Write(downSide);
-                }
+                Console.Write(barDivision);
+            }
+
+            for (float i = lastDivisionOfBar; i < length; i++)
+            {
+                Console.Write(emptyBarDivision);
             }
 
             Console.ForegroundColor = frameColor;
-            Console.Write(rightSide);
+            Console.Write(rightSideOfFrame);
             Console.ForegroundColor = defaltForegroundColor;
         }
     }

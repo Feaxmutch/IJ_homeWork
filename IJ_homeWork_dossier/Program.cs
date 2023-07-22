@@ -123,6 +123,7 @@
             char separator = ' ';
             bool dossierIsFounded = false;
 
+
             Console.Clear();
             Console.CursorVisible = true;
 
@@ -131,9 +132,9 @@
 
             for (int i = 0; i < names.Length; i++)
             {
-                string surname = names[i].Split(separator)[0].ToLower();
+                string currentSurname = names[i].Split(separator)[0].ToLower();
 
-                if (surname.Contains(userInput.ToLower()))
+                if (currentSurname.Contains(userInput.ToLower()))
                 {
                     WriteDossier(names, posts, i + 1);
                     dossierIsFounded = true;

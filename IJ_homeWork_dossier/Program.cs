@@ -139,7 +139,6 @@
                         dossierIsFounded = true;
                     }
                 }
-
             }
 
             if (dossierIsFounded == false)

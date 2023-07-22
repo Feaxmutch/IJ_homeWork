@@ -122,7 +122,12 @@
             string userInput = string.Empty;
             char separator = ' ';
             bool dossierIsFounded = false;
+            string[] surnames = new string[names.Length];
 
+            for (int i = 0; i < names.Length; i++)
+            {
+                surnames[i] = names[i].Split(separator)[0].ToLower();
+            }
 
             Console.Clear();
             Console.CursorVisible = true;
@@ -132,9 +137,7 @@
 
             for (int i = 0; i < names.Length; i++)
             {
-                string currentSurname = names[i].Split(separator)[0].ToLower();
-
-                if (currentSurname.Contains(userInput.ToLower()))
+                if (surnames[i].Contains(userInput.ToLower()))
                 {
                     WriteDossier(names, posts, i + 1);
                     dossierIsFounded = true;

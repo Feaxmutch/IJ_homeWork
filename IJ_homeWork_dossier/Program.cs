@@ -132,6 +132,7 @@
             for (int i = 0; i < names.Length; i++)
             {
                 string surname = names[i].Split(separator)[0].ToLower();
+
                 if (surname.Contains(userInput.ToLower()))
                 {
                     WriteDossier(names, posts, i + 1);

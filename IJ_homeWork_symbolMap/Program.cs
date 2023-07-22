@@ -12,20 +12,14 @@
             char[,] map = CreateMapFromFile("map.txt");
 
             Console.CursorVisible = false;
-            
+
             while (isWorking)
             {
-                Update(map, character, characterCordinates, ref isWorking);
+                UpdateMap(map, character, characterCordinates);
             }
         }
 
-        static void Update(char[,] map, char character, int[] characterCordinates, ref bool ContinueСondition)
-        {
-            WriteMap(map);
-            WriteCharacter(character, characterCordinates);
-        }
-
-        static void WriteMap(char[,] map)
+        static void UpdateMap(char[,] map, char character, int[] characterCordinates)
         {
             Console.SetCursorPosition(0, 0);
 
@@ -33,7 +27,14 @@
             {
                 for (int j = 0; j < map.GetLength(0); j++)
                 {
-                    Console.Write(map[j,i]);
+                    if (j == characterCordinates[0] && i == characterCordinates[1])
+                    {
+                        DrawCharacter(character, characterCordinates);
+                    }
+                    else
+                    {
+                        Console.Write(map[j, i]);
+                    }
                 }
 
                 Console.WriteLine();
@@ -56,10 +57,15 @@
             return map;
         }
 
-        static void WriteCharacter(char symbol, int[] cordinate)
+        static void DrawCharacter(char symbol, int[] cordinates)
         {
-            Console.SetCursorPosition(cordinate[0], cordinate[1]);
+            Console.SetCursorPosition(cordinates[0], cordinates[1]);
             Console.Write(symbol);
+        }
+
+        static int[] MoveCharacter(int[] cordinates, int moveDeractionX, int moveDeractionY)
+        {
+            return cordinates;
         }
     }
 }

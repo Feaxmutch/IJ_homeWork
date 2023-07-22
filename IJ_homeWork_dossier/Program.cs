@@ -71,6 +71,14 @@
             Console.Write("Введите Должность: ");
             userInputs[3] = Console.ReadLine();
 
+            for (int i = 0; i < userInputs.Length; i++)
+            {
+                if (userInputs[i] == string.Empty)
+                {
+                    userInputs[i] = "Не_указано";
+                }
+            }
+
             Console.CursorVisible = false;
 
             names = AddElement(names, $"{userInputs[1]} {userInputs[0]} {userInputs[2]}");
@@ -78,6 +86,8 @@
 
             Console.WriteLine("Добавленно следющее досье:");
             WriteDossier(names, posts, names.Length);
+
+            Console.ReadKey(true);
         }
 
         static void WriteDossier(string[] names, string[] posts, int dosserNumber)
@@ -95,8 +105,16 @@
             Console.Write("\nВведите номер досье, которое хотите удалить ");
             int dosserNumber = Convert.ToInt32(Console.ReadLine());
 
-            names = RemoveElement(names, dosserNumber - 1);
-            posts = RemoveElement(posts, dosserNumber - 1);
+            if (dosserNumber <= 0 || dosserNumber > names.Length)
+            {
+                Console.WriteLine("Некоректный номер досье");
+                Console.ReadKey();
+            }
+            else
+            {
+                names = RemoveElement(names, dosserNumber - 1);
+                posts = RemoveElement(posts, dosserNumber - 1);
+            }
         }
 
         static void FindDossierBySurname(string[] names, string[] posts)
@@ -113,11 +131,15 @@
 
             for (int i = 0; i < names.Length; i++)
             {
-                if (names[i].Split(separator)[0].Remove(userInput[0].Length).ToLower() == userInput[0].ToLower())
+                if (userInput[0].Length <= names[i].Split(separator)[0].Length)
                 {
-                    WriteDossier(names, posts, i + 1);
-                    dossierIsFounded = true;
+                    if (names[i].Split(separator)[0].Remove(userInput[0].Length).ToLower() == userInput[0].ToLower() || userInput[0].ToLower() == names[i].Split(separator)[0].ToLower())
+                    {
+                        WriteDossier(names, posts, i + 1);
+                        dossierIsFounded = true;
+                    }
                 }
+
             }
 
             if (dossierIsFounded == false)
@@ -137,7 +159,7 @@
                 WriteDossier(names, posts, i);
             }
 
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
 
         static string[] AddElement(string[] array, string newElement)

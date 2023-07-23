@@ -30,15 +30,15 @@
             Console.Write(leftSideOfFrame);
             Console.ForegroundColor = barColor;
 
-            WriteInFor(1, lastDivisionOfBar, barDivision);
-            WriteInFor(lastDivisionOfBar, length, emptyBarDivision);
+            DrawSymbols(1, lastDivisionOfBar, barDivision);
+            DrawSymbols(lastDivisionOfBar, length, emptyBarDivision);
 
             Console.ForegroundColor = frameColor;
             Console.Write(rightSideOfFrame);
             Console.ForegroundColor = defaltForegroundColor;
         }
 
-        static void WriteInFor(float startIteration, float lastIteration, char sumbol)
+        static void DrawSymbols(float startIteration, float lastIteration, char sumbol)
         {
             for (float i = startIteration; i <= lastIteration; i++)
             {

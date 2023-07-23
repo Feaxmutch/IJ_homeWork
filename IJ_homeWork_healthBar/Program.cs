@@ -30,19 +30,20 @@
             Console.Write(leftSideOfFrame);
             Console.ForegroundColor = barColor;
 
-            for (float i = 1; i <= lastDivisionOfBar; i++)
-            {
-                Console.Write(barDivision);
-            }
-
-            for (float i = lastDivisionOfBar; i < length; i++)
-            {
-                Console.Write(emptyBarDivision);
-            }
+            WriteInFor(1, lastDivisionOfBar, barDivision);
+            WriteInFor(lastDivisionOfBar, length, emptyBarDivision);
 
             Console.ForegroundColor = frameColor;
             Console.Write(rightSideOfFrame);
             Console.ForegroundColor = defaltForegroundColor;
+        }
+
+        static void WriteInFor(float startIteration, float lastIteration, char sumbol)
+        {
+            for (float i = startIteration; i <= lastIteration; i++)
+            {
+                Console.Write(sumbol);
+            }
         }
     }
 }

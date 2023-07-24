@@ -6,20 +6,44 @@
         {
             bool isWorking = true;
             char character = Convert.ToChar(File.ReadAllText("character.txt"));
-            int[] characterCordinates = new int[2];
-            characterCordinates[0] = 5;
-            characterCordinates[1] = 5;
+            char wall = Convert.ToChar(File.ReadAllText("wall.txt"));
+            int[] characterCordinates = new int[2] {5,5};
             char[,] map = CreateMapFromFile("map.txt");
+            ConsoleKeyInfo userInput;
 
             Console.CursorVisible = false;
 
             while (isWorking)
             {
-                UpdateMap(map, character, characterCordinates);
+                DrawLevel(map, character, characterCordinates);
+                userInput = Console.ReadKey();
+
+                switch (userInput.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        MoveUp(map, wall, characterCordinates);
+                        break;
+
+                    case ConsoleKey.DownArrow:
+                        MoveDown(map, wall, characterCordinates);
+                        break;
+
+                    case ConsoleKey.LeftArrow:
+                        MoveLeft(map, wall, characterCordinates);
+                        break;
+
+                    case ConsoleKey.RightArrow:
+                        MoveRight(map, wall, characterCordinates);
+                        break;
+
+                    case ConsoleKey.Escape:
+                        isWorking = false;
+                        break;
+                }
             }
         }
 
-        static void UpdateMap(char[,] map, char character, int[] characterCordinates)
+        static void DrawLevel(char[,] map, char character, int[] characterCordinates)
         {
             Console.SetCursorPosition(0, 0);
 
@@ -63,9 +87,36 @@
             Console.Write(symbol);
         }
 
-        static int[] MoveCharacter(int[] cordinates, int moveDeractionX, int moveDeractionY)
+        static void MoveRight(char[,] map, char wallChar, int[] characterCordinates)
         {
-            return cordinates;
+            if (map[characterCordinates[0] + 1, characterCordinates[1]] != wallChar)
+            {
+                characterCordinates[0]++;
+            }
+        }
+
+        static void MoveLeft(char[,] map, char wallChar, int[] characterCordinates)
+        {
+            if (map[characterCordinates[0] - 1, characterCordinates[1]] != wallChar)
+            {
+                characterCordinates[0]--;
+            }
+        }
+
+        static void MoveUp(char[,] map, char wallChar, int[] characterCordinates)
+        {
+            if (map[characterCordinates[0], characterCordinates[1] - 1] != wallChar)
+            {
+                characterCordinates[1]--;
+            }
+        }
+
+        static void MoveDown(char[,] map, char wallChar, int[] characterCordinates)
+        {
+            if (map[characterCordinates[0], characterCordinates[1] + 1] != wallChar)
+            {
+                characterCordinates[1]++;
+            }
         }
     }
 }

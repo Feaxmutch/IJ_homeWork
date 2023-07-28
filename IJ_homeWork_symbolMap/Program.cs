@@ -76,44 +76,45 @@
             Console.Write(symbol);
         }
 
-        static void MoveChar(int[] charCordinates, int[] charDirection)
+        static void MoveChar(char[,] map, int[] charCordinates, int charDirectionX, int charDirectionY, char wallChar)
         {
-            charCordinates[0] += charDirection[0];
-            charCordinates[1] += charDirection[1];
+            if (map[charCordinates[0] + charDirectionX, charCordinates[1] + charDirectionY] != wallChar)
+            {
+                charCordinates[0] += charDirectionX;
+                charCordinates[1] += charDirectionY;
+            }
         }
 
         static void GetDirection(ConsoleKeyInfo userInput, char[,] map, char wallChar, int[] charCordinates)
         {
+            const ConsoleKey UpArrow = ConsoleKey.UpArrow;
+            const ConsoleKey DownArrow = ConsoleKey.DownArrow;
+            const ConsoleKey LeftArrow = ConsoleKey.LeftArrow;
+            const ConsoleKey RightArrow = ConsoleKey.RightArrow;
+
+            int directionX = 0;
+            int directionY = 0;
+
             switch (userInput.Key)
             {
-                case ConsoleKey.UpArrow:
-                    if (map[charCordinates[0], charCordinates[1] -1] != wallChar)
-                    {
-                        MoveChar(charCordinates, new int[] { 0, - 1 });
-                    }
+                case UpArrow:
+                    directionY = -1;
                     break;
 
-                case ConsoleKey.DownArrow:
-                    if (map[charCordinates[0], charCordinates[1] + 1] != wallChar)
-                    {
-                        MoveChar(charCordinates, new int[] { 0, + 1 });
-                    }
+                case DownArrow:
+                    directionY = +1;
                     break;
 
-                case ConsoleKey.LeftArrow:
-                    if (map[charCordinates[0] - 1, charCordinates[1]] != wallChar)
-                    {
-                        MoveChar(charCordinates, new int[] { - 1, 0 });
-                    }
+                case LeftArrow:
+                    directionX = -1;
                     break;
 
-                case ConsoleKey.RightArrow:
-                    if (map[charCordinates[0] + 1, charCordinates[1]] != wallChar)
-                    {
-                        MoveChar(charCordinates, new int[] { + 1, 0 });
-                    }
+                case RightArrow:
+                    directionX = +1;
                     break;
             }
+
+            MoveChar(map, charCordinates, directionX, directionY, wallChar);
         }
     }
 }

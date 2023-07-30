@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\bin\Debug\net6.0\IJ_homeWork_capitals.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\bin\Debug\net6.0\IJ_homeWork_capitals.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\bin\Debug\net6.0\IJ_homeWork_capitals.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\bin\Debug\net6.0\IJ_homeWork_capitals.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\bin\Debug\net6.0\IJ_homeWork_capitals.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\refint\IJ_homeWork_capitals.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\IJ_homeWork_capitals.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_capitals\obj\Debug\net6.0\ref\IJ_homeWork_capitals.dll

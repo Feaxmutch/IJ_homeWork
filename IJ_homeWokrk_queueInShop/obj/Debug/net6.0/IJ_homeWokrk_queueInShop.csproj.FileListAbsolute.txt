@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\bin\Debug\net6.0\IJ_homeWokrk_queueInShop.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\bin\Debug\net6.0\IJ_homeWokrk_queueInShop.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\bin\Debug\net6.0\IJ_homeWokrk_queueInShop.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\bin\Debug\net6.0\IJ_homeWokrk_queueInShop.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\bin\Debug\net6.0\IJ_homeWokrk_queueInShop.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\refint\IJ_homeWokrk_queueInShop.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\IJ_homeWokrk_queueInShop.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWokrk_queueInShop\obj\Debug\net6.0\ref\IJ_homeWokrk_queueInShop.dll

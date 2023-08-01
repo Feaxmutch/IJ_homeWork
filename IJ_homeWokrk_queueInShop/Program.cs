@@ -17,13 +17,13 @@
             while (customers.Count > 0)
             {
                 Console.Clear();
-                WriteData(shopCashe, customers.Count);
+                WriteShopStatus(shopCashe, customers.Count);
                 ServeCustomer(customers, ref shopCashe);
                 Console.ReadKey(true);
             }
 
             Console.Clear();
-            WriteData(shopCashe, customers.Count);
+            WriteShopStatus(shopCashe, customers.Count);
             Console.WriteLine("Все клиенты обслужены.");
             Console.ReadKey(true);
         }
@@ -45,7 +45,7 @@
             customersQueue.Dequeue();
         }
 
-        static void WriteData(int shopCashe, int customersCount)
+        static void WriteShopStatus(int shopCashe, int customersCount)
         {
             Console.WriteLine($"Деньги магазина: {shopCashe}");
             Console.WriteLine($"Клиентов в очереди: {customersCount}");

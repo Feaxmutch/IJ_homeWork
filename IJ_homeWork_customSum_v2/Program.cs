@@ -18,11 +18,11 @@
 
                 if (int.TryParse(userInput, out int newNumber))
                 {
-                    Console.WriteLine($"Добавлено число: {AddNumber(numbers, newNumber)}");
+                    AddNumber(numbers, newNumber);
                 }
                 else if (userInput == CommandSum)
                 {
-                    Console.WriteLine($"Сумма введенных ранее чисел: {SumNumbers(numbers)}");
+                     SumNumbers(numbers);
                 }
                 else if (userInput == CommandExit)
                 {
@@ -33,13 +33,12 @@
             }
         }
 
-        static int AddNumber(List<int> numbers, int newNumber)
+        static void AddNumber(List<int> numbers, int newNumber)
         {
             numbers.Add(newNumber);
-            return newNumber;
         }
 
-        static int SumNumbers(List<int> numbers)
+        static void SumNumbers(List<int> numbers)
         {
             int sum = 0;
 
@@ -48,7 +47,7 @@
                 sum += numbers[i];
             }
 
-            return sum;
+            Console.WriteLine($"Сумма введенных ранее чисел: {sum}");
         }
     }
 }

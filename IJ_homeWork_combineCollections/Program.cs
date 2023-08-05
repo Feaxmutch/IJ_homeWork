@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            string[] Collection1 = new string[] {"1", "2", "1" };
-            string[] Collection2 = new string[] {"3", "2" };
-            List<string> combinedCollection = CombineCollections(Collection1, Collection2);
+            string[] numbersCollection1 = new string[] {"1", "2", "1" };
+            string[] numbersCollection2 = new string[] {"3", "2" };
+            List<string> combinedCollection = CombineCollections(numbersCollection1, numbersCollection2);
 
             for (int i = 0; i < combinedCollection.Count; i++)
             {
@@ -16,18 +16,18 @@
             Console.ReadKey();
         }
 
-        static List<string> CombineCollections(string[] Collection1, string[] Collection2)
+        static List<string> CombineCollections(string[] сollection1, string[] сollection2)
         {
             List<string> newCollection = new List<string>();
-            string[][] collections = new string[][] { Collection1, Collection2 };
+            string[][] collectionsForCombine = new string[][] { сollection1, сollection2 };
 
-            for (int i = 0; i < collections.Length; i++)
+            for (int i = 0; i < collectionsForCombine.Length; i++)
             {
-                for (int j = 0; j < collections[i].Length; j++)
+                for (int j = 0; j < collectionsForCombine[i].Length; j++)
                 {
-                    if (newCollection.Contains(collections[i][j]) == false)
+                    if (newCollection.Contains(collectionsForCombine[i][j]) == false)
                     {
-                        newCollection.Add(collections[i][j]);
+                        newCollection.Add(collectionsForCombine[i][j]);
                     }
                 }
             }

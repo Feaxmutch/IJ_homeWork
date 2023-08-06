@@ -4,22 +4,22 @@
     {
         static void Main(string[] args)
         {
-            string[] numbersCollection1 = new string[] {"1", "2", "1" };
-            string[] numbersCollection2 = new string[] {"3", "2" };
-            List<string> combinedCollection = CombineCollections(numbersCollection1, numbersCollection2);
+            string[] firstNumbers = new string[] {"1", "2", "1" };
+            string[] secondNumbers = new string[] {"3", "2" };
+            List<string> combinedNumbers = CombineCollections(firstNumbers, secondNumbers);
 
-            for (int i = 0; i < combinedCollection.Count; i++)
+            for (int i = 0; i < combinedNumbers.Count; i++)
             {
-                Console.Write(combinedCollection[i] + " ");
+                Console.Write(combinedNumbers[i] + " ");
             }
 
             Console.ReadKey();
         }
 
-        static List<string> CombineCollections(string[] сollection1, string[] сollection2)
+        static List<string> CombineCollections(string[] firstCollection, string[] secondCollection)
         {
             List<string> newCollection = new List<string>();
-            string[][] collectionsForCombine = new string[][] { сollection1, сollection2 };
+            string[][] collectionsForCombine = new string[][] { firstCollection, secondCollection };
 
             for (int i = 0; i < collectionsForCombine.Length; i++)
             {

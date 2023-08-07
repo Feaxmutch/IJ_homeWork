@@ -30,23 +30,23 @@
 
     class Player
     {
-        private string _Name;
-        private int _Level;
+        private string _name;
+        private int _level;
 
         public Player(string name)
         {
-            _Name = name;
-            _Level = 0;
+            _name = name;
+            _level = 0;
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Имя: {_Name}\nУровень: {_Level}");
+            Console.WriteLine($"Имя: {_name}\nУровень: {_level}");
         }
 
         public void UpLevel()
         {
-            _Level++;
+            _level++;
         }
     }
 }

@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\bin\Debug\net6.0\IJ_homeWork_propertys.exe
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\bin\Debug\net6.0\IJ_homeWork_propertys.deps.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\bin\Debug\net6.0\IJ_homeWork_propertys.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\bin\Debug\net6.0\IJ_homeWork_propertys.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\bin\Debug\net6.0\IJ_homeWork_propertys.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\refint\IJ_homeWork_propertys.dll
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.pdb
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\IJ_homeWork_propertys.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\IJ_homeWork_propertys\obj\Debug\net6.0\ref\IJ_homeWork_propertys.dll

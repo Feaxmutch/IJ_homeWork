@@ -31,7 +31,7 @@
             {
                 return _xPosition;
             }
-            set
+            private set
             {
                 _xPosition = SetPosition(value, Direction.X);
             }
@@ -43,7 +43,7 @@
             {
                 return _yPosition;
             }
-            set
+            private set
             {
                 _yPosition = SetPosition(value, Direction.Y);
             }

@@ -65,11 +65,22 @@
 
         public void AddPlayer()
         {
-            int newId = _random.Next(100000, 999999);
+            int minId = 1000000;
+            int maxId = 9999999;
+            int newId = minId;
 
             while (ContainsId(newId))
             {
-                newId = _random.Next(100000, 999999);
+                if (newId == maxId)
+                {
+                    Console.WriteLine("Невозможно назначить уникальный id. Превышен лимит.");
+                    Console.ReadKey();
+                    return;
+                }
+                else
+                {
+                    newId++;
+                }
             }
 
             Console.Clear();

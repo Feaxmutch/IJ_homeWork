@@ -59,28 +59,21 @@
 
     class Database
     {
-        private static Random _random = new Random();
-
         private List<PlayerProfile> _playerProfiles = new List<PlayerProfile>();
+        private int _id;
+
+        public Database()
+        {
+            _id = 1000;
+        }
 
         public void AddPlayer()
         {
-            int minId = 1000000;
-            int maxId = 9999999;
-            int newId = minId;
-
-            while (ContainsId(newId))
+            if (_id == int.MaxValue)
             {
-                if (newId == maxId)
-                {
-                    Console.WriteLine("Невозможно назначить уникальный id. Превышен лимит.");
-                    Console.ReadKey();
-                    return;
-                }
-                else
-                {
-                    newId++;
-                }
+                Console.WriteLine("Невозможно назначить уникальный id. Превышен лимит.");
+                Console.ReadKey();
+                return;
             }
 
             Console.Clear();
@@ -89,11 +82,12 @@
             string name = Console.ReadLine();
 
             Console.Write("Введите уровень игрока: ");
-            string level  = Console.ReadLine();
+            string level = Console.ReadLine();
 
             if (int.TryParse(level, out int parsedLevel))
             {
-                _playerProfiles.Add(new PlayerProfile(newId, name, parsedLevel));
+                _id++;
+                _playerProfiles.Add(new PlayerProfile(_id, name, parsedLevel));
             }
             else
             {
@@ -172,19 +166,6 @@
 
             Console.ForegroundColor = defaultForegroundColor;
             Console.ReadKey(true);
-        }
-
-        private bool ContainsId(int id)
-        {
-            for (int i = 0; i < _playerProfiles.Count; i++)
-            {
-                if (_playerProfiles[i].Id == id)
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         private bool TryGetPlayer(out PlayerProfile player)

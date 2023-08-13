@@ -4,14 +4,14 @@
     {
         static void Main(string[] args)
         {
-            const string MenuAddPlayer = "D1";
-            const string MenuRemovePlayer = "D2";
-            const string MenuWritePlayers = "D3";
-            const string MenuBanPlayer = "D4";
-            const string MenuUnBanPlayer = "D5";
-            const string CommandExit = "Escape";
+            const string MenuAddPlayer = "1";
+            const string MenuRemovePlayer = "2";
+            const string MenuWritePlayers = "3";
+            const string MenuBanPlayer = "4";
+            const string MenuUnBanPlayer = "5";
+            const string CommandExit = "exit";
 
-            DataBase dataBase = new DataBase();
+            Database database = new Database();
             bool isWorking = true;
             string userInput = string.Empty;
 
@@ -19,34 +19,34 @@
             {
                 Console.Clear();
                 Console.CursorVisible = false;
-                Console.WriteLine($"{MenuAddPlayer.Remove(0,1)}) добавить профиль" +
-                                  $"\n{MenuRemovePlayer.Remove(0, 1)}) удалить профиль" +
-                                  $"\n{MenuWritePlayers.Remove(0, 1)}) отобразить все профиля" +
-                                  $"\n{MenuBanPlayer.Remove(0, 1)}) забанить профиль" +
-                                  $"\n{MenuUnBanPlayer.Remove(0, 1)}) разбанить профиль" +
+                Console.WriteLine($"{MenuAddPlayer}) добавить профиль" +
+                                  $"\n{MenuRemovePlayer}) удалить профиль" +
+                                  $"\n{MenuWritePlayers}) отобразить все профиля" +
+                                  $"\n{MenuBanPlayer}) забанить профиль" +
+                                  $"\n{MenuUnBanPlayer}) разбанить профиль" +
                                   $"\n{CommandExit}) закрыть программу");
-                userInput = Console.ReadKey(true).Key.ToString();
+                userInput = Console.ReadLine();
 
                 switch (userInput)
                 {
                     case MenuAddPlayer:
-                        AddPlayer(dataBase);
+                        database.AddPlayer();
                         break;
 
                     case MenuRemovePlayer:
-                        RemovePlayer(dataBase);
+                        database.RemovePlayer();
                         break;
 
                     case MenuWritePlayers:
-                        WritePlayers(dataBase);
+                        database.WritePlayers();
                         break;
 
                     case MenuBanPlayer:
-                        BanPlayer(dataBase);
+                        database.BanPlayer();
                         break;
 
                     case MenuUnBanPlayer:
-                        UnBanPlayer(dataBase);
+                        database.UnbanPlayer();
                         break;
 
                     case CommandExit:
@@ -55,180 +55,86 @@
                 }
             }
         }
-
-        static void AddPlayer(DataBase dataBase)
-        {
-            string userInput = string.Empty;
-
-            while (userInput == string.Empty)
-            {
-                Console.Clear();
-
-                Console.Write("Введите имя будуещего профиля: ");
-                userInput = Console.ReadLine();
-            }
-
-            dataBase.AddPlayer(userInput);
-        }
-
-        static void RemovePlayer(DataBase dataBase)
-        {
-            string userInput = string.Empty;
-
-            Console.Clear();
-            dataBase.WritePlayers();
-
-            Console.Write("Введите id профиля, который хотите удалить: ");
-            userInput = Console.ReadLine();
-
-            if (int.TryParse(userInput, out int id))
-            {
-                dataBase.RemovePlayer(id);
-            }
-            else
-            {
-                Console.WriteLine("Похоже вы ввели не число.");
-            }
-        }
-
-        static void WritePlayers(DataBase dataBase)
-        {
-            Console.Clear();
-            dataBase.WritePlayers();
-            Console.ReadKey(true);
-        }
-
-        static void BanPlayer(DataBase dataBase)
-        {
-            string userInput = string.Empty;
-
-            Console.Clear();
-            dataBase.WritePlayers();
-
-            Console.Write("Введите id профиля, который хотите заблокировать: ");
-            userInput = Console.ReadLine();
-
-            if (int.TryParse(userInput, out int id))
-            {
-                dataBase.BanPlayer(id);
-            }
-            else
-            {
-                Console.WriteLine("Похоже вы ввели не число.");
-            }
-        }
-
-        static void UnBanPlayer(DataBase dataBase)
-        {
-            string userInput = string.Empty;
-
-            Console.Clear();
-            dataBase.WritePlayers();
-
-            Console.Write("Введите id профиля, который хотите разблокировать: ");
-            userInput = Console.ReadLine();
-
-            if (int.TryParse(userInput, out int id))
-            {
-                dataBase.UnBanPlayer(id);
-            }
-            else
-            {
-                Console.WriteLine("Похоже вы ввели не число.");
-            }
-        }
     }
 
-    class DataBase
+    class Database
     {
+        private static Random _random = new Random();
+
         private List<PlayerProfile> _playerProfiles = new List<PlayerProfile>();
 
-        private bool Contains(int id)
+        public void AddPlayer()
         {
-            for (int i = 0; i < _playerProfiles.Count; i++)
+            int newId = _random.Next(100000, 999999);
+
+            while (ContainsId(newId))
             {
-                if (_playerProfiles[i].ID == id)
-                {
-                    return true;
-                }
+                newId = _random.Next(100000, 999999);
             }
 
-            return false;
-        }
+            Console.Clear();
 
-        private int GetPlayerIndex(int id)
-        {
-            for (int i = 0; i < _playerProfiles.Count; i++)
+            Console.Write("Введите имя игрока: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Введите уровень игрока: ");
+            string level  = Console.ReadLine();
+
+            if (int.TryParse(level, out int parsedLevel))
             {
-                if (_playerProfiles[i].ID == id)
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
-
-        public void AddPlayer(string name)
-        {
-            Random random = new Random();
-            int newID = random.Next(100000, 999999);
-
-            while (Contains(newID))
-            {
-                newID = random.Next(100000, 999999);
-            }
-
-            _playerProfiles.Add(new PlayerProfile(newID, name));
-        }
-
-        public void RemovePlayer(int id)
-        {
-            if (Contains(id))
-            {
-                _playerProfiles.RemoveAt(GetPlayerIndex(id));
+                _playerProfiles.Add(new PlayerProfile(newId, name, parsedLevel));
             }
             else
             {
-                Console.WriteLine($"игрок с id {id} не найден.");
+                Console.WriteLine("Похоже вы ввели не число.");
             }
         }
 
-        public void BanPlayer(int id)
+        public void RemovePlayer()
         {
-            if (Contains(id))
+            WritePlayers();
+
+            if (TryGetPlayer(out PlayerProfile player))
             {
-                if (_playerProfiles[GetPlayerIndex(id)].IsBanned == false)
-                {
-                    _playerProfiles[GetPlayerIndex(id)].Ban();
-                }
-                else
-                {
-                    Console.WriteLine($"игрок с id {id} уже забанен.");
-                }
+                _playerProfiles.Remove(player);
+
+                Console.WriteLine("Игрок успешно удалён.");
             }
             else
             {
-                Console.WriteLine($"игрок с id {id} не найден.");
+                Console.WriteLine("Игрок не найден.");
             }
         }
 
-        public void UnBanPlayer(int id)
+        public void BanPlayer()
         {
-            if (Contains(id))
+            WritePlayers();
+
+            if (TryGetPlayer(out PlayerProfile player))
             {
-                if (_playerProfiles[GetPlayerIndex(id)].IsBanned == true)
-                {
-                    _playerProfiles[GetPlayerIndex(id)].UnBan();
-                }
-                else
-                {
-                    Console.WriteLine($"игрок с id {id} уже разбанен.");
-                }
+                player.Ban();
+
+                Console.WriteLine("Игрок успешно заблокирован.");
             }
             else
             {
-                Console.WriteLine($"игрок с id {id} не найден.");
+                Console.WriteLine("Ошибка ввода данных.");
+            }
+        }
+
+        public void UnbanPlayer()
+        {
+            WritePlayers();
+
+            if (TryGetPlayer(out PlayerProfile player))
+            {
+                player.Unban();
+
+                Console.WriteLine("Игрок успешно Разблокировн.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода данных.");
             }
         }
 
@@ -236,6 +142,8 @@
         {
             ConsoleColor defaultForegroundColor = Console.ForegroundColor;
             ConsoleColor banColor = ConsoleColor.Red;
+
+            Console.Clear();
 
             for (int i = 0; i < _playerProfiles.Count; i++)
             {
@@ -248,24 +156,59 @@
                     Console.ForegroundColor = defaultForegroundColor;
                 }
 
-                Console.WriteLine($"ID: {_playerProfiles[i].ID} Name: {_playerProfiles[i].Name} Level: {_playerProfiles[i].Level}");
+                Console.WriteLine($"ID: {_playerProfiles[i].Id} Name: {_playerProfiles[i].Name} Level: {_playerProfiles[i].Level}");
             }
 
             Console.ForegroundColor = defaultForegroundColor;
+            Console.ReadKey(true);
+        }
+
+        private bool ContainsId(int id)
+        {
+            for (int i = 0; i < _playerProfiles.Count; i++)
+            {
+                if (_playerProfiles[i].Id == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool TryGetPlayer(out PlayerProfile player)
+        {
+            Console.Write("Введите id игрока: ");
+            string userInput = Console.ReadLine();
+
+            if (int.TryParse(userInput, out int id))
+            {
+                for (int i = 0; i < _playerProfiles.Count; i++)
+                {
+                    if (_playerProfiles[i].Id == id)
+                    {
+                        player = _playerProfiles[i];
+                        return true;
+                    }
+                }
+            }
+
+            player = null;
+            return false;
         }
     }
 
     class PlayerProfile
     {
-        public PlayerProfile(int id, string name)
+        public PlayerProfile(int id, string name, int level)
         {
-            ID = id;
+            Id = id;
             Name = name;
-            Level = 0;
+            Level = level;
             IsBanned = false;
         }
 
-        public int ID { get; private set; }
+        public int Id { get; private set; }
 
         public string Name { get; private set; }
 
@@ -278,7 +221,7 @@
             IsBanned = true;
         }
 
-        public void UnBan()
+        public void Unban()
         {
             IsBanned = false;
         }

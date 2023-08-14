@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\bin\Debug\net6.0\IJ_homeWork_deckOfCards.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\bin\Debug\net6.0\IJ_homeWork_deckOfCards.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\bin\Debug\net6.0\IJ_homeWork_deckOfCards.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\bin\Debug\net6.0\IJ_homeWork_deckOfCards.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\bin\Debug\net6.0\IJ_homeWork_deckOfCards.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\refint\IJ_homeWork_deckOfCards.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\IJ_homeWork_deckOfCards.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_deckOfCards\obj\Debug\net6.0\ref\IJ_homeWork_deckOfCards.dll

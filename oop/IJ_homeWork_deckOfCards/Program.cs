@@ -34,7 +34,7 @@
 
     class Deck
     {
-        private static Random random = new Random();
+        private static Random _random = new Random();
 
         private Stack<Card> _cards = new Stack<Card>();
 
@@ -54,12 +54,13 @@
             {
                 return _cards.Pop();
             }
-            
         }
 
         private void CreateCards()
         {
-            foreach (CardSuit Suit in Enum.GetValues(typeof(CardSuit)))
+            Array Suits = Enum.GetValues(typeof(CardSuit));
+
+            foreach (CardSuit Suit in Suits)
             {
                 for (int i = Card.MinRank; i <= Card.MaxRank; i++)
                 {
@@ -79,7 +80,7 @@
 
             for (int i = 0; i < cards.Count; i++)
             {
-                Swap(cards, i, i + random.Next(cards.Count - i));
+                Swap(cards, i, _random.Next(0, cards.Count));
             }
 
             for (int i = 0; i < cards.Count; i++)
@@ -98,8 +99,8 @@
 
     class Card
     {
-        private static int s_minRank = 2;
-        private static int s_maxRank = 10;
+        private static int _minRank = 2;
+        private static int _maxRank = 10;
 
         private int _rank;
 
@@ -115,7 +116,7 @@
         {
             get
             {
-                return s_minRank;
+                return _minRank;
             }
             private set { }
         }
@@ -124,7 +125,7 @@
         {
             get
             {
-                return s_maxRank;
+                return _maxRank;
             }
             private set { }
         }

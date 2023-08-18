@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\bin\Debug\net6.0\IJ_homeWork_bookStorage.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\bin\Debug\net6.0\IJ_homeWork_bookStorage.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\bin\Debug\net6.0\IJ_homeWork_bookStorage.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\bin\Debug\net6.0\IJ_homeWork_bookStorage.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\bin\Debug\net6.0\IJ_homeWork_bookStorage.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\refint\IJ_homeWork_bookStorage.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\IJ_homeWork_bookStorage.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_bookStorage\obj\Debug\net6.0\ref\IJ_homeWork_bookStorage.dll

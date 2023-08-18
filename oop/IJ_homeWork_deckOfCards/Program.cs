@@ -58,35 +58,27 @@
 
         private void CreateCards()
         {
-            Array Suits = Enum.GetValues(typeof(CardSuit));
+            Array suits = Enum.GetValues(typeof(CardSuit));
 
-            foreach (CardSuit Suit in Suits)
+            foreach (CardSuit suit in suits)
             {
                 for (int i = Card.MinRank; i <= Card.MaxRank; i++)
                 {
-                    _cards.Push(new Card(Suit, i));
+                    _cards.Push(new Card(suit, i));
                 }
             }
         }
 
         private void ShuffleCards()
         {
-            List<Card> cards = new List<Card>();
-
-            for (int i = _cards.Count; i > 0; i--)
-            {
-                cards.Add(_cards.Pop());
-            }
+            List<Card> cards = new List<Card>(_cards);
 
             for (int i = 0; i < cards.Count; i++)
             {
                 Swap(cards, i, _random.Next(0, cards.Count));
             }
 
-            for (int i = 0; i < cards.Count; i++)
-            {
-                _cards.Push(cards[i]);
-            }
+            _cards = new Stack<Card>(cards);
         }
 
         private void Swap(List<Card> cardsList, int firstIndex, int secondIndex)

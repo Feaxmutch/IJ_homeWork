@@ -44,7 +44,7 @@
 
     class Human
     {
-        protected List<Item> _items = new List<Item>();
+        protected List<Item> Items = new List<Item>();
 
         public int Money { get; protected set; }
 
@@ -57,27 +57,9 @@
             Console.ReadKey();
         }
 
-        public int TakeMoney(int money)
-        {
-            if (money <= Money)
-            {
-                return Money -= money;
-            }
-
-            return 0;
-        }
-
-        public void GetItem(Item item)
-        {
-            if (item != null)
-            {
-                _items.Add(item);
-            }
-        }
-
         protected virtual void ShowItems()
         {
-            foreach (var item in _items)
+            foreach (var item in Items)
             {
                 item.ShowInfo();
             }
@@ -97,7 +79,7 @@
             {
                 for (int i = 0; i < count; i++)
                 {
-                    _items.Add(product);
+                    Items.Add(product);
                 }
             }
         }
@@ -126,7 +108,7 @@
                         break;
 
                     case MenuBuy:
-                        Buy(player);
+                        Sell(player);
                         break;
 
                     case CommandExit:
@@ -140,30 +122,20 @@
         {
             Console.Clear();
 
-            for (int i = 0; i < _items.Count; i++)
+            for (int i = 0; i < Items.Count; i++)
             {
                 Console.Write(i + 1 + ". ");
-                _items[i].ShowInfo();
+                Items[i].ShowInfo();
             }
 
             Console.ReadKey();
         }
 
-        private Item TakeItem(Item product, int money)
-        {
-            if (money >= product.Price)
-            {
-                return product;
-            }
-
-            return null;
-        }
-
         private Item GetItemByNumber(int productNumber)
         {
-            if (productNumber > 0 && productNumber <= _items.Count)
+            if (productNumber > 0 && productNumber <= Items.Count)
             {
-                return _items[productNumber - 1];
+                return Items[productNumber - 1];
             }
             else
             {
@@ -171,7 +143,7 @@
             }
         }
 
-        private void Buy(Player player)
+        private void Sell(Player player)
         {
             Console.Clear();
             ShowItems();
@@ -192,8 +164,9 @@
 
                 if (player.Money >= itemForBuy.Price)
                 {
-                    player.GetItem(TakeItem(itemForBuy, player.TakeMoney(itemForBuy.Price)));
-                    _items.Remove(itemForBuy);
+                    player.TakeMoney(itemForBuy.Price);
+                    player.GetItem(itemForBuy);
+                    Items.Remove(itemForBuy);
                 }
             }
             else
@@ -201,7 +174,7 @@
                 Console.WriteLine("Ошибка. Номер предмета должен быть числом.");
                 Console.ReadKey();
             }
-        } 
+        }
     }
 
     class Item
@@ -227,6 +200,24 @@
         public Player()
         {
             Money = 10000;
+        }
+
+        public int TakeMoney(int money)
+        {
+            if (money <= Money)
+            {
+                return Money -= money;
+            }
+
+            return 0;
+        }
+
+        public void GetItem(Item item)
+        {
+            if (item != null)
+            {
+                Items.Add(item);
+            }
         }
     }
 }

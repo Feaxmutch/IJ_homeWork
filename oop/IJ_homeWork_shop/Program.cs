@@ -12,7 +12,8 @@
             Item shield = new Item("Shield", 360);
             Item armor = new Item("Armor", 230);
             Item healingPotion = new Item("Healing potion", 45);
-            Seller seller = new Seller(new List<Item>() { sword, shield, armor, healingPotion }, 5);
+            Dictionary<Item, int> sellerItems = new Dictionary<Item, int>() { { sword, 5 }, { shield, 4 }, { armor, 4 }, { healingPotion, 8 } };
+            Seller seller = new Seller(sellerItems);
             Player player = new Player();
             bool isWorking = true;
 
@@ -42,7 +43,7 @@
         }
     }
 
-    class Human
+    class Character
     {
         protected List<Item> Items = new List<Item>();
 
@@ -71,15 +72,17 @@
         }
     }
 
-    class Seller : Human
+    class Seller: Character
     {
-        public Seller(List<Item> products, int count)
+        public Seller(Dictionary<Item, int> items)
         {
-            foreach (Item product in products)
+            Dictionary<Item, int>.KeyCollection keys = items.Keys;
+
+            foreach (var item in keys)
             {
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < items[item]; i++)
                 {
-                    Items.Add(product);
+                    Items.Add(item);
                 }
             }
         }
@@ -195,7 +198,7 @@
         }
     }
 
-    class Player : Human
+    class Player: Character
     {
         public Player()
         {

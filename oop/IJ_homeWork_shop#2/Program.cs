@@ -27,21 +27,20 @@
 
     class Superstore
     {
+        private Queue<Customer> _customers;
+        private Dictionary<Product, int> _products;
+
         public Superstore(Dictionary<Product, int> products)
         {
-            Customers = new Queue<Customer>();
-            Products = products;
+            _customers = new Queue<Customer>();
+            _products = products;
             int customersCount = UserUtils.GetRandomNumber(5, 10);
 
             for (int i = 0; i < customersCount; i++)
             {
-                Customers.Enqueue(GenerateCustomer());
+                _customers.Enqueue(GenerateCustomer());
             }
         }
-
-        public Queue<Customer> Customers { get; private set; }
-
-        public Dictionary<Product, int> Products { get; private set; }
 
         public void Work()
         {
@@ -53,9 +52,9 @@
                 ShowInfo();
                 Console.WriteLine();
 
-                if (Customers.Count > 0)
+                if (_customers.Count > 0)
                 {
-                    Customer currentCustomer = Customers.Peek();
+                    Customer currentCustomer = _customers.Peek();
                     Console.WriteLine("К вам пришел клиент со следующими продуктами:");
                     currentCustomer.ShowProducts();
                     int finalPrice = GetPriceSum(currentCustomer.GiveProducts());
@@ -71,7 +70,7 @@
 
                     currentCustomer.ToPay(finalPrice);
                     Console.WriteLine("И успешно оплачивает свою цену.");
-                    Customers.Dequeue();
+                    _customers.Dequeue();
                     Console.ReadKey();
                     continue;
                 }
@@ -91,41 +90,41 @@
 
         private void ShowProducts()
         {
-            Dictionary<Product, int>.KeyCollection keys = Products.Keys;
+            Dictionary<Product, int>.KeyCollection keys = _products.Keys;
 
             Console.WriteLine("Продукты в наличии:");
 
             foreach (var product in keys)
             {
-                Console.WriteLine($"Название: {product.Name} стоимость: {product.Price} количество: {Products[product]}");
+                Console.WriteLine($"Название: {product.Name} стоимость: {product.Price} количество: {_products[product]}");
             }
         }
 
         private void ShowCustomersCount()
         {
-            Console.WriteLine($"Количество клиентов: {Customers.Count}");
+            Console.WriteLine($"Количество клиентов: {_customers.Count}");
         }
 
         private void ReturnProduct(out Product returnedProduct)
         {
-            returnedProduct = Customers.Peek().GiveRandomProduct();
+            returnedProduct = _customers.Peek().GiveRandomProduct();
 
-            if (Products.ContainsKey(returnedProduct))
+            if (_products.ContainsKey(returnedProduct))
             {
-                Products[returnedProduct]++;
+                _products[returnedProduct]++;
                 return;
             }
 
-            Products[returnedProduct] = 1;
+            _products[returnedProduct] = 1;
         }
 
         private Product GiveProduct(Product product)
         {
-            if (Products.ContainsKey(product))
+            if (_products.ContainsKey(product))
             {
-                if (Products[product] > 0)
+                if (_products[product] > 0)
                 {
-                    Products[product]--;
+                    _products[product]--;
                     return product;
                 }
             }
@@ -135,16 +134,16 @@
 
         private Customer GenerateCustomer()
         {
-            Dictionary<Product, int>.KeyCollection keys = Products.Keys;
+            Dictionary<Product, int>.KeyCollection keys = _products.Keys;
             List<Product> customerProducts = new List<Product>();
 
             foreach (var product in keys)
             {
                 int productCount = UserUtils.GetRandomNumber(6);
 
-                if (productCount > Products[product])
+                if (productCount > _products[product])
                 {
-                    productCount = Products[product];
+                    productCount = _products[product];
                 }
 
                 for (int i = 0; i < productCount; i++)

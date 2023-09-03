@@ -27,13 +27,11 @@
 
     class Superstore
     {
-        private static Random s_random = new Random();
-
         public Superstore(Dictionary<Product, int> products)
         {
             Customers = new Queue<Customer>();
             Products = products;
-            int customersCount = s_random.Next(5, 10);
+            int customersCount = UserUtils.GetRandomNumber(5, 10);
 
             for (int i = 0; i < customersCount; i++)
             {
@@ -57,12 +55,13 @@
 
                 if (Customers.Count > 0)
                 {
+                    Customer currentCustomer = Customers.Peek();
                     Console.WriteLine("К вам пришел клиент со следующими продуктами:");
-                    Customers.Peek().ShowProducts();
-                    int finalPrice = GetPriceSum(Customers.Peek().Products);
+                    currentCustomer.ShowProducts();
+                    int finalPrice = GetPriceSum(currentCustomer.GiveProducts());
                     Console.WriteLine($"Клиент должен заплатить {finalPrice}");
 
-                    if (Customers.Peek().Money < finalPrice)
+                    if (currentCustomer.Money < finalPrice)
                     {
                         ReturnProduct(out Product returnedProduct);
                         Console.WriteLine($"но не может. По этому он возвращает {returnedProduct.Name}");
@@ -70,7 +69,7 @@
                         continue;
                     }
 
-                    Customers.Peek().ToPay(finalPrice);
+                    currentCustomer.ToPay(finalPrice);
                     Console.WriteLine("И успешно оплачивает свою цену.");
                     Customers.Dequeue();
                     Console.ReadKey();
@@ -141,7 +140,7 @@
 
             foreach (var product in keys)
             {
-                int productCount = s_random.Next(0, 6);
+                int productCount = UserUtils.GetRandomNumber(6);
 
                 if (productCount > Products[product])
                 {
@@ -186,30 +185,33 @@
 
     class Customer
     {
-        private static Random s_random = new Random();
+        private List<Product> _products;
 
         public Customer(List<Product> products)
         {
-            Products = products;
-            Money = s_random.Next(100, 2000);
+            _products = products;
+            Money = UserUtils.GetRandomNumber(100, 2000);
         }
 
         public int Money { get; private set; }
 
-        public List<Product> Products { get; private set; }
+        public List<Product> GiveProducts()
+        {
+            return _products;
+        }
 
         public Product GiveRandomProduct()
         {
-            Product randomProduct = Products[s_random.Next(0, Products.Count)];
-            Products.Remove(randomProduct);
+            Product randomProduct = _products[UserUtils.GetRandomNumber(_products.Count)];
+            _products.Remove(randomProduct);
             return randomProduct;
         }
 
         public void ShowProducts()
         {
-            for (int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < _products.Count; i++)
             {
-                Console.WriteLine($"Название: {Products[i].Name} стоимость: {Products[i].Price}");
+                Console.WriteLine($"Название: {_products[i].Name} стоимость: {_products[i].Price}");
             }
         }
 
@@ -219,6 +221,21 @@
             {
                 Money -= price;
             }
+        }
+    }
+
+    class UserUtils
+    {
+        private static Random s_random = new Random();
+
+        public static int GetRandomNumber(int min, int max)
+        {
+            return s_random.Next(min, max);
+        }
+
+        public static int GetRandomNumber(int max)
+        {
+            return s_random.Next(max);
         }
     }
 }

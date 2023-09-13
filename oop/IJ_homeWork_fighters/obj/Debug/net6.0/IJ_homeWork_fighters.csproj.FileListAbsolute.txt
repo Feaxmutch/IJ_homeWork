@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\bin\Debug\net6.0\IJ_homeWork_fighters.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\bin\Debug\net6.0\IJ_homeWork_fighters.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\bin\Debug\net6.0\IJ_homeWork_fighters.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\bin\Debug\net6.0\IJ_homeWork_fighters.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\bin\Debug\net6.0\IJ_homeWork_fighters.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\refint\IJ_homeWork_fighters.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\IJ_homeWork_fighters.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fighters\obj\Debug\net6.0\ref\IJ_homeWork_fighters.dll

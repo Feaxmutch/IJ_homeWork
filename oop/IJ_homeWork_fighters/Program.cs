@@ -23,11 +23,11 @@
 
             if (fighter1.Health > 0)
             {
-                fighter1.WinWords();
+                fighter1.WriteWinWords();
             }
             else
             {
-                fighter2.WinWords();
+                fighter2.WriteWinWords();
             }
         }
 
@@ -172,7 +172,7 @@
 
         public abstract void ShowHealth();
 
-        public abstract void WinWords();
+        public abstract void WriteWinWords();
     }
 
     class Knight : Fighter
@@ -220,7 +220,7 @@
             Console.ForegroundColor = DefaultColor;
         }
 
-        public override void WinWords()
+        public override void WriteWinWords()
         {
             Console.ForegroundColor = Color;
             Console.Write("Рыцарь победил");
@@ -258,7 +258,7 @@
             Console.ForegroundColor = DefaultColor;
         }
 
-        public override void WinWords()
+        public override void WriteWinWords()
         {
             Console.ForegroundColor = Color;
             Console.Write("Копейщик победил");
@@ -299,7 +299,7 @@
             Console.ForegroundColor = DefaultColor;
         }
 
-        public override void WinWords()
+        public override void WriteWinWords()
         {
             Console.ForegroundColor = Color;
             Console.Write("Варвар победил");
@@ -340,7 +340,7 @@
             Console.ForegroundColor = DefaultColor;
         }
 
-        public override void WinWords()
+        public override void WriteWinWords()
         {
             Console.ForegroundColor = Color;
             Console.Write("Викинг победил");
@@ -393,7 +393,7 @@
             Console.ForegroundColor = DefaultColor;
         }
 
-        public override void WinWords()
+        public override void WriteWinWords()
         {
             Console.ForegroundColor = Color;
             Console.Write("Щитовик победил");

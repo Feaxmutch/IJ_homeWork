@@ -80,11 +80,16 @@
             for (int i = 0; i < soldiersCount; i++)
             {
                 _soldiers.Add(GenerateSoldier());
-                SoldiersCount++;
             }
         }
 
-        public int SoldiersCount { get; private set; }
+        public int SoldiersCount 
+        { 
+            get 
+            {
+                return _soldiers.Count;
+            }
+        }
 
         public Soldier GenerateSoldier()
         {
@@ -187,7 +192,6 @@
                 if (attackedSoldier.IsDied)
                 {
                     _soldiers.Remove(attackedSoldier);
-                    SoldiersCount--;
                 }
             }
             

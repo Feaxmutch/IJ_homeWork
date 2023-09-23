@@ -4,7 +4,8 @@
     {
         static void Main()
         {
-            Battlefield battlefield = new();
+            List<Platoon> platoons = new List<Platoon>() { new Platoon("Ястреб", 5), new Platoon("Кобра", 5) };
+            Battlefield battlefield = new Battlefield(platoons);
             battlefield.Fight();
         }
     }
@@ -21,51 +22,67 @@
 
     class Battlefield
     {
-        private Platoon _leftPlatoon = new Platoon(5);
-        private Platoon _rightPlatoon = new Platoon(5);
-        private int _platoonTurn;
+        private List<Platoon> _platoons = new List<Platoon>();
+
+        public Battlefield(List<Platoon> platoons)
+        {
+            _platoons = new List<Platoon>(platoons);
+        }
 
         public void Fight()
         {
-            _platoonTurn = 1;
+            bool IsFighting = true;
 
-            while (_leftPlatoon.SoldiersCount > 0 && _rightPlatoon.SoldiersCount > 0)
+            while (IsFighting)
             {
-                Console.Clear();
-                ShowInfo();
-
-                if (_platoonTurn == 1)
+                for (int i = 0; i < _platoons.Count; i++)
                 {
-                    _leftPlatoon.AttackPlatoon(_rightPlatoon);
-                    _platoonTurn = 2;
+                    if (_platoons.Count > 1)
+                    {
+                        if (_platoons[i].SoldiersCount > 0)
+                        {
+                            if (i < _platoons.Count - 1)
+                            {
+                                FightStep(_platoons[i], _platoons[i + 1]);
+                            }
+                            else
+                            {
+                                FightStep(_platoons[i], _platoons[0]);
+                            }
+                        }
+                        else
+                        {
+                            _platoons.RemoveAt(i);
+                        }
+                    }
+                    else
+                    {
+                        IsFighting = false;
+                    }
                 }
-                else
-                {
-                    _rightPlatoon.AttackPlatoon(_leftPlatoon);
-                    _platoonTurn = 1;
-                }
-
-                Console.ReadKey();
             }
 
             Console.Clear();
+            Console.Write($"Победил взвод {_platoons[0].Name}");
+            Console.ReadKey();
+        }
 
-            if (_leftPlatoon.SoldiersCount > 0)
-            {
-                Console.WriteLine("Победил взвод 1");
-            }
-            else
-            {
-                Console.WriteLine("Победил взвод 2");
-            }
+        private void FightStep(Platoon attacker, Platoon attacked)
+        {
+            Console.Clear();
+            ShowInfo();
+            attacker.AttackPlatoon(attacked);
+            Console.ReadKey();
         }
 
         private void ShowInfo()
         {
-            Console.WriteLine($"Солдат в 1-ом взводе: {_leftPlatoon.SoldiersCount}");
-            Console.WriteLine($"Солдат в 2-ом взводе: {_rightPlatoon.SoldiersCount}");
+            for (int i = 0; i < _platoons.Count; i++)
+            {
+                Console.WriteLine($"Солдат в взводе {_platoons[i].Name}: {_platoons[i].SoldiersCount}");
+            }
+            
             Console.WriteLine();
-            Console.WriteLine($"Ход {_platoonTurn}-го взвода");
         }
     }
 
@@ -75,21 +92,22 @@
         private int _maxPosition = 3;
         private List<Soldier> _soldiers = new List<Soldier>();
 
-        public Platoon(int soldiersCount)
+        public Platoon(string name, int soldiersCount)
         {
+            Name = name;
+
             for (int i = 0; i < soldiersCount; i++)
             {
                 _soldiers.Add(GenerateSoldier());
             }
         }
 
-        public int SoldiersCount 
-        { 
-            get 
-            {
-                return _soldiers.Count;
-            }
+        public int SoldiersCount
+        {
+            get => _soldiers.Count;
         }
+
+        public string Name { get; private set; }
 
         public Soldier GenerateSoldier()
         {
@@ -97,59 +115,19 @@
             const int Supporter = 1;
             const int Stormtrooper = 2;
 
-            const int AX50 = 3;
-            const int Kar98k = 4;
-
-            const int M13 = 5;
-            const int Scar = 6;
-
-            const int MP5 = 7;
-            const int Uzi = 8;
-
             int soldierType = StaticRandom.Next(sniper, Stormtrooper + 1);
             int soldierPosition = StaticRandom.Next(_minPosition, _maxPosition + 1);
-            int solderWeapon;
 
             switch (soldierType)
             {
                 case sniper:
-                    solderWeapon = StaticRandom.Next(AX50, Kar98k + 1);
-
-                    switch (solderWeapon)
-                    {
-                        case AX50:
-                            return new Sniper(soldierPosition, new AX50());
-
-                        case Kar98k:
-                            return new Sniper(soldierPosition, new Kar98k());
-                    }
-                    break;
+                    return new Sniper(soldierPosition, new SniperRifle());
 
                 case Supporter:
-                    solderWeapon = StaticRandom.Next(M13, Scar + 1);
-
-                    switch (solderWeapon)
-                    {
-                        case M13:
-                            return new Supporter(soldierPosition, new M13());
-
-                        case Scar:
-                            return new Supporter(soldierPosition, new Scar());
-                    }
-                    break;
+                    return new Supporter(soldierPosition, new Rifle());
 
                 case Stormtrooper:
-                    solderWeapon = StaticRandom.Next(MP5, Uzi + 1);
-
-                    switch (solderWeapon)
-                    {
-                        case MP5:
-                            return new Stormtrooper(soldierPosition, new MP5());
-
-                        case Uzi:
-                            return new Stormtrooper(soldierPosition, new Uzi());
-                    }
-                    break;
+                    return new Stormtrooper(soldierPosition, new SMG());
             }
 
             return null;
@@ -172,9 +150,9 @@
             }
 
             int targetPosition = StaticRandom.Next(_minPosition, attackingSoldier.AttackDistance - attackingSoldier.Position + 1);
-            Console.WriteLine($"Солдат на позиции {attackingSoldier.Position} и дистанцией атаки {attackingSoldier.AttackDistance} атакует случайного солдата на позиции {targetPosition}");
+            Console.WriteLine($"Солдат взвода {Name} на позиции {attackingSoldier.Position} и дистанцией атаки {attackingSoldier.AttackDistance} атакует случайного солдата взвода {target.Name} на позиции {targetPosition}");
             target.TakeDamage(targetPosition, attackingSoldier.WeaponDamage);
-            
+
         }
 
         public void TakeDamage(int position, int damage)
@@ -187,14 +165,14 @@
             }
             else
             {
-                attackedSoldier.TakeDamage(damage, out int finaleDamage);
+                attackedSoldier.TakeDamage(damage);
 
                 if (attackedSoldier.IsDied)
                 {
                     _soldiers.Remove(attackedSoldier);
                 }
             }
-            
+
         }
 
         private List<Soldier> GetSoldiersInPosition(int position)
@@ -247,7 +225,7 @@
         private Weapon _weapon;
         private int _position;
 
-        public Soldier(double armor, int position ,Weapon weapon)
+        public Soldier(double armor, int position, Weapon weapon)
         {
             Health = 100;
             IsDied = false;
@@ -262,42 +240,24 @@
 
         public double Armor
         {
-            get
-            {
-                return _armor;
-            }
-            private set
-            {
-                _armor = Math.Clamp(value, 0, 0.9);
-            }
+            get => _armor;
+            private set => _armor = Math.Clamp(value, 0, 0.9);
         }
 
         public int Position
         {
-            get
-            {
-                return _position;
-            }
-            private set
-            {
-                _position = Math.Clamp(value, 1, 3);
-            }
+            get => _position;
+            private set => _position = Math.Clamp(value, 1, 3);
         }
 
         public int WeaponDamage
         {
-            get
-            {
-                return _weapon.Damage;
-            }
+            get => _weapon.Damage;
         }
 
         public int AttackDistance
         {
-            get
-            {
-                return _weapon.Distance;
-            }
+            get => _weapon.Distance;
         }
 
         public void MoveTo(int position)
@@ -305,9 +265,9 @@
             Position = position;
         }
 
-        public void TakeDamage(int damage, out int finaleDamage)
+        public void TakeDamage(int damage)
         {
-            finaleDamage = (int)(damage - (damage * Armor));
+            int finaleDamage = (int)(damage - (damage * Armor));
             Health -= finaleDamage;
             Console.WriteLine($"Солдат на позиции {Position} получил {finaleDamage} ед. урона");
 
@@ -323,65 +283,69 @@
     {
         private int _distance;
         private int _damage;
+        private int _minDamage;
+        private int _maxDamage;
 
-        public Weapon(int damage ,int distance)
+        public Weapon(int minDamage, int maxDamage, int distance)
         {
-            Damage = damage;
+            MaxDamage = maxDamage;
+            MinDamage = minDamage;
+            Damage = StaticRandom.Next(MinDamage, MaxDamage + 1);
             Distance = distance;
         }
 
-        public int Distance 
-        { 
-            get
-            {
-                return _distance;
-            }
-            private set
-            {
-                _distance = Math.Max(value, 1);
-            }
+        private int MinDamage
+        {
+            get => _minDamage;
+            set => _minDamage = Math.Min(value, _maxDamage - 1);
+        }
+
+        private int MaxDamage
+        {
+            get => _maxDamage;
+            set => _maxDamage = Math.Max(value, _minDamage + 1);
+        }
+
+        public int Distance
+        {
+            get => _distance;
+            private set => _distance = Math.Max(value, 1);
         }
 
         public int Damage
         {
-            get
-            {
-                return _damage;
-            }
-            private set
-            {
-                _damage = Math.Max(value, 1);
-            }
+            get => _damage;
+            private set => _damage = Math.Clamp(value, _minDamage, _maxDamage);
         }
     }
 
-    abstract class SniperRifle : Weapon
+    class SniperRifle : Weapon
     {
-        public SniperRifle(int damage) : base(damage, 4)
+        public SniperRifle() : base(110, 150, 4)
         {
 
         }
     }
 
-    abstract class Rifle : Weapon
+    class Rifle : Weapon
     {
-        public Rifle(int damage) : base(damage, 3)
+        public Rifle() : base(25, 40, 3)
         {
 
         }
     }
 
-    abstract class SMG : Weapon
+    class SMG : Weapon
     {
-        public SMG(int damage) : base(damage, 2)
+        public SMG() : base(10, 25, 2)
         {
-            
+
         }
     }
 
     class Sniper : Soldier
     {
-        public Sniper(int position ,SniperRifle weapon) : base(0.2, position, weapon)
+        public Sniper(int position, SniperRifle weapon) : base(0.2, position, weapon)
         {
 
         }
@@ -398,54 +362,6 @@
     class Supporter : Soldier
     {
         public Supporter(int position, Rifle weapon) : base(0.5, position, weapon)
-        {
-
-        }
-    }
-
-    class AX50 : SniperRifle
-    {
-        public AX50() : base(150)
-        {
-
-        }
-    }
-
-    class Kar98k : SniperRifle
-    {
-        public Kar98k() : base(120)
-        {
-
-        }
-    }
-
-    class M13 : Rifle
-    {
-        public M13() : base(25)
-        {
-
-        }
-    }
-
-    class Scar : Rifle
-    {
-        public Scar() : base(30)
-        {
-
-        }
-    }
-
-    class MP5 : SMG
-    {
-        public MP5() : base(22)
-        {
-
-        }
-    }
-
-    class Uzi : SMG
-    {
-        public Uzi() : base(14)
         {
 
         }

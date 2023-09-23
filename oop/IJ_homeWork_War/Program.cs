@@ -109,16 +109,16 @@
 
         public Soldier GenerateSoldier()
         {
-            const int sniper = 0;
+            const int Sniper = 0;
             const int Supporter = 1;
             const int Stormtrooper = 2;
 
-            int soldierType = StaticRandom.GetRandomValue(sniper, Stormtrooper + 1);
+            int soldierType = StaticRandom.GetRandomValue(Sniper, Stormtrooper + 1);
             int soldierPosition = StaticRandom.GetRandomValue(_minPosition, _maxPosition + 1);
 
             switch (soldierType)
             {
-                case sniper:
+                case Sniper:
                     return new Sniper(soldierPosition, new SniperRifle());
 
                 case Supporter:
@@ -170,7 +170,6 @@
                     _soldiers.Remove(attackedSoldier);
                 }
             }
-
         }
 
         private List<Soldier> GetSoldiersInPosition(int position)
@@ -321,47 +320,31 @@
     {
         public SniperRifle() : base(110, 150, 4)
         {
-
         }
     }
 
     class Rifle : Weapon
     {
-        public Rifle() : base(25, 40, 3)
-        {
-
-        }
+        public Rifle() : base(25, 40, 3){}
     }
 
     class SMG : Weapon
     {
-        public SMG() : base(10, 25, 2)
-        {
-
-        }
+        public SMG() : base(10, 25, 2){}
     }
 
     class Sniper : Soldier
     {
-        public Sniper(int position, SniperRifle weapon) : base(0.2, position, weapon)
-        {
-
-        }
+        public Sniper(int position, SniperRifle weapon) : base(0.2, position, weapon){}
     }
 
     class Stormtrooper : Soldier
     {
-        public Stormtrooper(int position, SMG weapon) : base(0.7, position, weapon)
-        {
-
-        }
+        public Stormtrooper(int position, SMG weapon) : base(0.7, position, weapon){}
     }
 
     class Supporter : Soldier
     {
-        public Supporter(int position, Rifle weapon) : base(0.5, position, weapon)
-        {
-
-        }
+        public Supporter(int position, Rifle weapon) : base(0.5, position, weapon){}
     }
 }

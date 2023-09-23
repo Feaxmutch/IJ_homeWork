@@ -12,11 +12,11 @@
 
     static class StaticRandom
     {
-        private static Random _random = new Random();
+        private static Random s_random = new Random();
 
-        public static int Next(int minValue, int maxValue)
+        public static int GetRandomValue(int minValue, int maxValue)
         {
-            return _random.Next(minValue, maxValue);
+            return s_random.Next(minValue, maxValue);
         }
     }
 
@@ -31,33 +31,31 @@
 
         public void Fight()
         {
-            bool IsFighting = true;
+            Platoon attacker;
+            Platoon target;
 
-            while (IsFighting)
+            while (_platoons.Count > 1)
             {
-                for (int i = 0; i < _platoons.Count; i++)
+                for (int i = 0; i < _platoons.Count && _platoons.Count > 1; i++)
                 {
-                    if (_platoons.Count > 1)
+                    if (_platoons[i].SoldiersCount > 0)
                     {
-                        if (_platoons[i].SoldiersCount > 0)
+                        attacker = _platoons[i];
+
+                        if (i < _platoons.Count - 1)
                         {
-                            if (i < _platoons.Count - 1)
-                            {
-                                FightStep(_platoons[i], _platoons[i + 1]);
-                            }
-                            else
-                            {
-                                FightStep(_platoons[i], _platoons[0]);
-                            }
+                            target = _platoons[i + 1];
                         }
                         else
                         {
-                            _platoons.RemoveAt(i);
+                            target = _platoons[0];
                         }
+
+                        FightStep(attacker, target);
                     }
                     else
                     {
-                        IsFighting = false;
+                        _platoons.RemoveAt(i);
                     }
                 }
             }
@@ -67,11 +65,11 @@
             Console.ReadKey();
         }
 
-        private void FightStep(Platoon attacker, Platoon attacked)
+        private void FightStep(Platoon attacker, Platoon target)
         {
             Console.Clear();
             ShowInfo();
-            attacker.AttackPlatoon(attacked);
+            attacker.AttackPlatoon(target);
             Console.ReadKey();
         }
 
@@ -81,7 +79,7 @@
             {
                 Console.WriteLine($"Солдат в взводе {_platoons[i].Name}: {_platoons[i].SoldiersCount}");
             }
-            
+
             Console.WriteLine();
         }
     }
@@ -115,8 +113,8 @@
             const int Supporter = 1;
             const int Stormtrooper = 2;
 
-            int soldierType = StaticRandom.Next(sniper, Stormtrooper + 1);
-            int soldierPosition = StaticRandom.Next(_minPosition, _maxPosition + 1);
+            int soldierType = StaticRandom.GetRandomValue(sniper, Stormtrooper + 1);
+            int soldierPosition = StaticRandom.GetRandomValue(_minPosition, _maxPosition + 1);
 
             switch (soldierType)
             {
@@ -149,7 +147,7 @@
                 }
             }
 
-            int targetPosition = StaticRandom.Next(_minPosition, attackingSoldier.AttackDistance - attackingSoldier.Position + 1);
+            int targetPosition = StaticRandom.GetRandomValue(_minPosition, attackingSoldier.AttackDistance - attackingSoldier.Position + 1);
             Console.WriteLine($"Солдат взвода {Name} на позиции {attackingSoldier.Position} и дистанцией атаки {attackingSoldier.AttackDistance} атакует случайного солдата взвода {target.Name} на позиции {targetPosition}");
             target.TakeDamage(targetPosition, attackingSoldier.WeaponDamage);
 
@@ -194,7 +192,7 @@
         {
             if (soldiers.Count > 0)
             {
-                return soldiers[StaticRandom.Next(0, soldiers.Count)];
+                return soldiers[StaticRandom.GetRandomValue(0, soldiers.Count)];
             }
             else
             {
@@ -290,7 +288,7 @@
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
-            Damage = StaticRandom.Next(MinDamage, MaxDamage + 1);
+            Damage = StaticRandom.GetRandomValue(MinDamage, MaxDamage + 1);
             Distance = distance;
         }
 

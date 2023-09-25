@@ -216,11 +216,14 @@
 
     abstract class Soldier
     {
+        private static int s_LowestPosition = 1;
+        private static int s_HightestPosition = 3;
+        private static double s_MaxArmor = 0.9;
+
         private double _armor;
         private Weapon _weapon;
         private int _position;
-        private static int _lowestPosition = 1;
-        private static int _hightestPosition = 3;
+        
 
         public Soldier(double armor, int position, Weapon weapon)
         {
@@ -238,23 +241,23 @@
         public double Armor
         {
             get => _armor;
-            private set => _armor = Math.Clamp(value, 0, 0.9);
+            private set => _armor = Math.Clamp(value, 0, s_MaxArmor);
         }
 
         public int Position
         {
             get => _position;
-            private set => _position = Math.Clamp(value, _lowestPosition, _hightestPosition);
+            private set => _position = Math.Clamp(value, s_LowestPosition, s_HightestPosition);
         }
 
         public static int LowestPosition
         {
-            get => _lowestPosition;
+            get => s_LowestPosition;
         }
 
         public static int HightestPosition
         {
-            get => _hightestPosition;
+            get => s_HightestPosition;
         }
 
         public int WeaponDamage

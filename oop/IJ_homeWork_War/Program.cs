@@ -86,8 +86,6 @@
 
     class Platoon
     {
-        private int _minPosition = 1;
-        private int _maxPosition = 3;
         private List<Soldier> _soldiers = new List<Soldier>();
 
         public Platoon(string name, int soldiersCount)
@@ -114,7 +112,7 @@
             const int Stormtrooper = 2;
 
             int soldierType = StaticRandom.GetRandomValue(Sniper, Stormtrooper + 1);
-            int soldierPosition = StaticRandom.GetRandomValue(_minPosition, _maxPosition + 1);
+            int soldierPosition = StaticRandom.GetRandomValue(Soldier.LowestPosition, Soldier.HightestPosition + 1);
 
             switch (soldierType)
             {
@@ -135,9 +133,9 @@
         {
             Soldier attackingSoldier = GetRandomSoldier(_soldiers);
 
-            while (attackingSoldier.AttackDistance - attackingSoldier.Position <= _minPosition - 1)
+            while (attackingSoldier.AttackDistance - attackingSoldier.Position <= Soldier.LowestPosition - 1)
             {
-                if (GetSoldiersInPosition(_minPosition).Count != 0)
+                if (GetSoldiersInPosition(Soldier.LowestPosition).Count != 0)
                 {
                     attackingSoldier = GetRandomSoldier(GetSoldiersInPosition(1));
                 }
@@ -147,7 +145,7 @@
                 }
             }
 
-            int targetPosition = StaticRandom.GetRandomValue(_minPosition, attackingSoldier.AttackDistance - attackingSoldier.Position + 1);
+            int targetPosition = StaticRandom.GetRandomValue(Soldier.LowestPosition, attackingSoldier.AttackDistance - attackingSoldier.Position + 1);
             Console.WriteLine($"Солдат взвода {Name} на позиции {attackingSoldier.Position} и дистанцией атаки {attackingSoldier.AttackDistance} атакует случайного солдата взвода {target.Name} на позиции {targetPosition}");
             target.TakeDamage(targetPosition, attackingSoldier.WeaponDamage);
 
@@ -201,7 +199,7 @@
 
         private void MoveSoldiersForward()
         {
-            for (int i = _minPosition + 1; i <= _maxPosition; i++)
+            for (int i = Soldier.LowestPosition + 1; i <= Soldier.HightestPosition; i++)
             {
                 List<Soldier> soldiers = GetSoldiersInPosition(i);
 
@@ -221,6 +219,8 @@
         private double _armor;
         private Weapon _weapon;
         private int _position;
+        private static int _lowestPosition = 1;
+        private static int _hightestPosition = 3;
 
         public Soldier(double armor, int position, Weapon weapon)
         {
@@ -244,7 +244,17 @@
         public int Position
         {
             get => _position;
-            private set => _position = Math.Clamp(value, 1, 3);
+            private set => _position = Math.Clamp(value, _lowestPosition, _hightestPosition);
+        }
+
+        public static int LowestPosition
+        {
+            get => _lowestPosition;
+        }
+
+        public static int HightestPosition
+        {
+            get => _hightestPosition;
         }
 
         public int WeaponDamage

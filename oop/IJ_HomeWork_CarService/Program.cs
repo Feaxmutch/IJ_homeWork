@@ -2,13 +2,13 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int carsCount = 5;
             int detalesCount = 20;
-            int penality = 50;
-            int workPrice = 30;
-            int startMoney = 1000;
+            int penality = 300;
+            int workPrice = 50;
+            int startMoney = 500;
             double brokenChanse = 25;
 
             List<Detale> detales = new List<Detale>();
@@ -57,6 +57,7 @@
     class CarService
     {
         private int _money;
+        private int _detalesPrice;
         private Queue<Car> _cars;
         private Dictionary<Detale, int> _detales = new Dictionary<Detale, int>();
 
@@ -96,6 +97,8 @@
 
         private void ServeCar(Car car)
         {
+            _detalesPrice = 0;
+
             while (car.IsFixed == false)
             {
                 List<Detale> selectedDetales = SelectDetales(car);
@@ -109,6 +112,7 @@
                         if (newDetale != null)
                         {
                             car.SwichDetale(newDetale);
+                            _detalesPrice += newDetale.Price;
                         }
                         else
                         {
@@ -119,7 +123,11 @@
 
                     if (car.IsFixed)
                     {
-                        _money += WorkPrice;
+                        Console.WriteLine("Машина востановленна");
+                        _money += WorkPrice + _detalesPrice;
+                        Console.WriteLine($"Вы получили Оплату за работу в размере {WorkPrice}, и оплату верно заменённых деталей в размере {_detalesPrice}");
+                        Console.ReadKey();
+
                     }
                 }
                 else
@@ -259,7 +267,14 @@
 
         public List<Detale> MakeDetales()
         {
-            return new List<Detale>(_detales);
+            List<Detale> newList = new List<Detale>();
+
+            foreach (var detale in _detales)
+            {
+                newList.Add(new Detale(detale.Name, detale.Price, detale.IsBroken));
+            }
+
+            return newList;
         }
     }
 
@@ -290,7 +305,20 @@
             }
         }
 
-        public List<Detale> Detales { get => new List<Detale>(_detales); }
+        public List<Detale> Detales 
+        { 
+            get
+            {
+                List<Detale> newList = new List<Detale>();
+
+                foreach (var detale in _detales)
+                {
+                    newList.Add(new Detale(detale.Name, detale.Price, detale.IsBroken));
+                }
+
+                return newList;
+            }
+        }
 
         public void GenerateDamage(double BrokenChanse)
         {
@@ -305,7 +333,7 @@
                 }
             }
 
-            if (isBrokened = false)
+            if (isBrokened == false)
             {
                 _detales[CustomRandom.GetNumber(0, _detales.Count)].TakeDamage();
             }

@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\bin\Debug\net6.0\IJ_HomeWork_CarService.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\bin\Debug\net6.0\IJ_HomeWork_CarService.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\bin\Debug\net6.0\IJ_HomeWork_CarService.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\bin\Debug\net6.0\IJ_HomeWork_CarService.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\bin\Debug\net6.0\IJ_HomeWork_CarService.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\refint\IJ_HomeWork_CarService.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\IJ_HomeWork_CarService.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_HomeWork_CarService\obj\Debug\net6.0\ref\IJ_HomeWork_CarService.dll

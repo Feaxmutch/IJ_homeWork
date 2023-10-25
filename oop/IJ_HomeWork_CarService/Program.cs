@@ -11,13 +11,13 @@
             int startMoney = 500;
             double brokenChanse = 25;
 
-            List<Detale> detales = new List<Detale>();
+            List<Detail> detales = new List<Detail>();
             List<Car> cars = new List<Car>();
 
-            detales.Add(new Detale("Двигатель", 100, false));
-            detales.Add(new Detale("Колеса", 70, false));
-            detales.Add(new Detale("Корпус", 90, false));
-            detales.Add(new Detale("Коробка передач", 80, false));
+            detales.Add(new Detail("Двигатель", 100, false));
+            detales.Add(new Detail("Колеса", 70, false));
+            detales.Add(new Detail("Корпус", 90, false));
+            detales.Add(new Detail("Коробка передач", 80, false));
 
             Factory factory = new Factory(detales);
 
@@ -40,6 +40,7 @@
     {
         private static Random s_random = new();
         private static double s_maxPrecent = 100;
+
         public static bool GetBool(double trueChanse)
         {
             int pointsInPrecent = 100;
@@ -59,9 +60,9 @@
         private int _money;
         private int _detalesPrice;
         private Queue<Car> _cars;
-        private Dictionary<Detale, int> _detales = new Dictionary<Detale, int>();
+        private Dictionary<Detail, int> _detales = new Dictionary<Detail, int>();
 
-        public CarService(List<Car> cars, List<Detale> detales, int detalesCount, int startMoney, int penalty, int workPrice)
+        public CarService(List<Car> cars, List<Detail> detales, int detalesCount, int startMoney, int penalty, int workPrice)
         {
             _cars = new Queue<Car>(cars);
 
@@ -99,15 +100,15 @@
         {
             _detalesPrice = 0;
 
-            while (car.IsFixed == false)
+            while (car.IsFixed() == false)
             {
-                List<Detale> selectedDetales = SelectDetales(car);
+                List<Detail> selectedDetales = SelectDetales(car);
 
                 if (selectedDetales.Count > 0)
                 {
                     foreach (var selsectedDetale in selectedDetales)
                     {
-                        Detale newDetale = GetDetaleByName(selsectedDetale.Name);
+                        Detail newDetale = GetDetaleByName(selsectedDetale.Name);
 
                         if (newDetale != null)
                         {
@@ -121,7 +122,7 @@
                         }
                     }
 
-                    if (car.IsFixed)
+                    if (car.IsFixed())
                     {
                         Console.WriteLine("Машина востановленна");
                         _money += WorkPrice + _detalesPrice;
@@ -147,11 +148,11 @@
             }
         }
 
-        private List<Detale> SelectDetales(Car car)
+        private List<Detail> SelectDetales(Car car)
         {
             bool isSelecting = true;
             List<int> detaleNumbers = new List<int>();
-            List<Detale> selectedDetales = new List<Detale>();
+            List<Detail> selectedDetales = new List<Detail>();
 
             while (isSelecting)
             {
@@ -184,7 +185,7 @@
                 {
                     if (int.TryParse(detaleNumber, out int number))
                     {
-                        if (number > 0 && number <= car.Detales.Count)
+                        if (number > 0 && number <= car.GetDetails().Count)
                         {
                             if (detaleNumbers.Contains(number) == false)
                             {
@@ -207,13 +208,13 @@
 
             for (int i = 0; i < detaleNumbers.Count; i++)
             {
-                selectedDetales.Add(car.Detales[detaleNumbers[i] - 1]);
+                selectedDetales.Add(car.GetDetails()[detaleNumbers[i] - 1]);
             }
 
             return selectedDetales;
         }
 
-        private Detale GetDetaleByName(string detaleName)
+        private Detail GetDetaleByName(string detaleName)
         {
             var detales = _detales.Keys;
 
@@ -224,7 +225,7 @@
                     if (_detales[detale] > 0)
                     {
                         _detales[detale]--;
-                        return new Detale(detale.Name, detale.Price, detale.IsBroken);
+                        return new Detail(detale.Name, detale.Price, detale.IsBroken);
                     }
                 }
             }
@@ -251,13 +252,13 @@
 
     class Factory
     {
-        private List<Detale> _detales;
+        private List<Detail> _detales;
 
-        public Factory(List<Detale> detales)
+        public Factory(List<Detail> detales)
         {
             if (detales != null && detales.Count > 0)
             {
-                _detales = new List<Detale>(detales);
+                _detales = new List<Detail>(detales);
             }
             else
             {
@@ -265,13 +266,13 @@
             }
         }
 
-        public List<Detale> MakeDetales()
+        public List<Detail> MakeDetales()
         {
-            List<Detale> newList = new List<Detale>();
+            List<Detail> newList = new List<Detail>();
 
             foreach (var detale in _detales)
             {
-                newList.Add(new Detale(detale.Name, detale.Price, detale.IsBroken));
+                newList.Add(new Detail(detale.Name, detale.Price, detale.IsBroken));
             }
 
             return newList;
@@ -280,51 +281,45 @@
 
     class Car
     {
-        private List<Detale> _detales;
+        private List<Detail> _details;
 
-        public Car(List<Detale> detales)
+        public Car(List<Detail> detales)
         {
-            _detales = new List<Detale>(detales);
+            _details = new List<Detail>(detales);
         }
 
         public int MaterialDamage { get; private set; }
 
-        public bool IsFixed
+        public List<Detail> GetDetails()
         {
-            get
-            {
-                foreach (var detale in _detales)
-                {
-                    if (detale.IsBroken)
-                    {
-                        return false;
-                    }
-                }
+            List<Detail> newList = new List<Detail>();
 
-                return true;
+            foreach (var detale in _details)
+            {
+                newList.Add(new Detail(detale.Name, detale.Price, detale.IsBroken));
             }
+
+            return newList;
         }
 
-        public List<Detale> Detales 
-        { 
-            get
+        public bool IsFixed()
+        {
+            foreach (var detale in _details)
             {
-                List<Detale> newList = new List<Detale>();
-
-                foreach (var detale in _detales)
+                if (detale.IsBroken)
                 {
-                    newList.Add(new Detale(detale.Name, detale.Price, detale.IsBroken));
+                    return false;
                 }
-
-                return newList;
             }
+
+            return true;
         }
 
         public void GenerateDamage(double BrokenChanse)
         {
             bool isBrokened = false;
 
-            foreach (var detale in _detales)
+            foreach (var detale in _details)
             {
                 if (CustomRandom.GetBool(BrokenChanse))
                 {
@@ -335,42 +330,40 @@
 
             if (isBrokened == false)
             {
-                _detales[CustomRandom.GetNumber(0, _detales.Count)].TakeDamage();
+                _details[CustomRandom.GetNumber(0, _details.Count)].TakeDamage();
             }
         }
 
         public void ShowDetales()
         {
-            for (int i = 0; i < _detales.Count; i++)
+            for (int i = 0; i < _details.Count; i++)
             {
                 Console.Write($"{i + 1} ");
-                _detales[i].ShowInfo();
+                _details[i].ShowInfo();
             }
         }
 
-        public void SwichDetale(Detale newDetale)
+        public void SwichDetale(Detail newDetale)
         {
-            for (int i = 0; i < _detales.Count; i++)
+            for (int i = 0; i < _details.Count; i++)
             {
-                if (_detales[i].Name == newDetale.Name)
+                if (_details[i].Name == newDetale.Name)
                 {
-                    if (_detales[i].IsBroken == false)
+                    if (_details[i].IsBroken == false)
                     {
-                        MaterialDamage = _detales[i].Price;
+                        MaterialDamage = _details[i].Price;
                     }
 
-                    _detales[i] = newDetale;
+                    _details[i] = newDetale;
                     break;
                 }
             }
-
-            return;
         }
     }
 
-    class Detale
+    class Detail
     {
-        public Detale(string name, int price, bool isBroken)
+        public Detail(string name, int price, bool isBroken)
         {
             Name = name;
             Price = price;

@@ -5,25 +5,25 @@
         static void Main()
         {
             int carsCount = 5;
-            int detalesCount = 20;
+            int detailsCount = 20;
             int penality = 300;
             int workPrice = 50;
             int startMoney = 500;
             double brokenChanse = 25;
 
-            List<Detail> detales = new List<Detail>();
+            List<Detail> details = new List<Detail>();
             List<Car> cars = new List<Car>();
 
-            detales.Add(new Detail("Двигатель", 100, false));
-            detales.Add(new Detail("Колеса", 70, false));
-            detales.Add(new Detail("Корпус", 90, false));
-            detales.Add(new Detail("Коробка передач", 80, false));
+            details.Add(new Detail("Двигатель", 100, false));
+            details.Add(new Detail("Колеса", 70, false));
+            details.Add(new Detail("Корпус", 90, false));
+            details.Add(new Detail("Коробка передач", 80, false));
 
-            Factory factory = new Factory(detales);
+            Factory factory = new Factory(details);
 
             for (int i = 0; i < carsCount; i++)
             {
-                cars.Add(new Car(factory.MakeDetales()));
+                cars.Add(new Car(factory.MakeDetails()));
             }
 
             foreach (var car in cars)
@@ -31,7 +31,7 @@
                 car.GenerateDamage(brokenChanse);
             }
 
-            CarService carService = new CarService(cars, factory.MakeDetales(), detalesCount, startMoney, penality, workPrice);
+            CarService carService = new CarService(cars, factory.MakeDetails(), detailsCount, startMoney, penality, workPrice);
             carService.Work();
         }
     }
@@ -58,17 +58,17 @@
     class CarService
     {
         private int _money;
-        private int _detalesPrice;
+        private int _detailsPrice;
         private Queue<Car> _cars;
-        private Dictionary<Detail, int> _detales = new Dictionary<Detail, int>();
+        private Dictionary<Detail, int> _details = new Dictionary<Detail, int>();
 
-        public CarService(List<Car> cars, List<Detail> detales, int detalesCount, int startMoney, int penalty, int workPrice)
+        public CarService(List<Car> cars, List<Detail> details, int detailsCount, int startMoney, int penalty, int workPrice)
         {
             _cars = new Queue<Car>(cars);
 
-            for (int i = 0; i < detales.Count; i++)
+            for (int i = 0; i < details.Count; i++)
             {
-                _detales[detales[i]] = detalesCount;
+                _details[details[i]] = detailsCount;
             }
 
             Penality = Math.Abs(penalty);
@@ -98,26 +98,26 @@
 
         private void ServeCar(Car car)
         {
-            _detalesPrice = 0;
+            _detailsPrice = 0;
 
             while (car.IsFixed() == false)
             {
-                List<Detail> selectedDetales = SelectDetales(car);
+                List<Detail> selectedDetails = SelectDetails(car);
 
-                if (selectedDetales.Count > 0)
+                if (selectedDetails.Count > 0)
                 {
-                    foreach (var selsectedDetale in selectedDetales)
+                    foreach (var selsectedDetail in selectedDetails)
                     {
-                        Detail newDetale = GetDetaleByName(selsectedDetale.Name);
+                        Detail newDetail = GetDetailByName(selsectedDetail.Name);
 
-                        if (newDetale != null)
+                        if (newDetail != null)
                         {
-                            car.SwichDetale(newDetale);
-                            _detalesPrice += newDetale.Price;
+                            car.SwichDetail(newDetail);
+                            _detailsPrice += newDetail.Price;
                         }
                         else
                         {
-                            Console.WriteLine($"На складе нет детали {selsectedDetale.Name}");
+                            Console.WriteLine($"На складе нет детали {selsectedDetail.Name}");
                             Console.ReadKey();
                         }
                     }
@@ -125,8 +125,8 @@
                     if (car.IsFixed())
                     {
                         Console.WriteLine("Машина востановленна");
-                        _money += WorkPrice + _detalesPrice;
-                        Console.WriteLine($"Вы получили Оплату за работу в размере {WorkPrice}, и оплату верно заменённых деталей в размере {_detalesPrice}");
+                        _money += WorkPrice + _detailsPrice;
+                        Console.WriteLine($"Вы получили Оплату за работу в размере {WorkPrice}, и оплату верно заменённых деталей в размере {_detailsPrice}");
                         Console.ReadKey();
 
                     }
@@ -148,25 +148,25 @@
             }
         }
 
-        private List<Detail> SelectDetales(Car car)
+        private List<Detail> SelectDetails(Car car)
         {
             bool isSelecting = true;
-            List<int> detaleNumbers = new List<int>();
-            List<Detail> selectedDetales = new List<Detail>();
+            List<int> detailNumbers = new List<int>();
+            List<Detail> selectedDetails = new List<Detail>();
 
             while (isSelecting)
             {
                 Console.Clear();
                 ShowInfo();
                 Console.WriteLine("Детали машины клиента:");
-                car.ShowDetales();
+                car.ShowDetails();
                 Console.WriteLine("\n Выбранные детали:");
 
-                for (int i = 0; i < detaleNumbers.Count; i++)
+                for (int i = 0; i < detailNumbers.Count; i++)
                 {
-                    Console.Write(detaleNumbers[i]);
+                    Console.Write(detailNumbers[i]);
 
-                    if (i < detaleNumbers.Count - 1)
+                    if (i < detailNumbers.Count - 1)
                     {
                         Console.Write(", ");
                     }
@@ -175,21 +175,21 @@
                 Console.WriteLine("\n Выберите номер детали, которую хотите поменять, " +
                                  $"\n или введите пустое поле, если выбрали все необходимые детали." +
                                  $"\n Не выбрав ни одной детали, вы отказываете клиенту.");
-                string detaleNumber = Console.ReadLine();
+                string detailNumber = Console.ReadLine();
 
-                if (detaleNumber == string.Empty)
+                if (detailNumber == string.Empty)
                 {
                     isSelecting = false;
                 }
                 else
                 {
-                    if (int.TryParse(detaleNumber, out int number))
+                    if (int.TryParse(detailNumber, out int number))
                     {
                         if (number > 0 && number <= car.GetDetails().Count)
                         {
-                            if (detaleNumbers.Contains(number) == false)
+                            if (detailNumbers.Contains(number) == false)
                             {
-                                detaleNumbers.Add(number);
+                                detailNumbers.Add(number);
                             }
                         }
                         else
@@ -200,32 +200,32 @@
                     }
                     else
                     {
-                        Console.WriteLine($"\"{detaleNumber}\" не является числом.");
+                        Console.WriteLine($"\"{detailNumber}\" не является числом.");
                         Console.ReadKey();
                     }
                 }
             }
 
-            for (int i = 0; i < detaleNumbers.Count; i++)
+            for (int i = 0; i < detailNumbers.Count; i++)
             {
-                selectedDetales.Add(car.GetDetails()[detaleNumbers[i] - 1]);
+                selectedDetails.Add(car.GetDetails()[detailNumbers[i] - 1]);
             }
 
-            return selectedDetales;
+            return selectedDetails;
         }
 
-        private Detail GetDetaleByName(string detaleName)
+        private Detail GetDetailByName(string detailName)
         {
-            var detales = _detales.Keys;
+            var details = _details.Keys;
 
-            foreach (var detale in detales)
+            foreach (var detail in details)
             {
-                if (detale.Name == detaleName)
+                if (detail.Name == detailName)
                 {
-                    if (_detales[detale] > 0)
+                    if (_details[detail] > 0)
                     {
-                        _detales[detale]--;
-                        return new Detail(detale.Name, detale.Price, detale.IsBroken);
+                        _details[detail]--;
+                        return new Detail(detail.Name, detail.Price, detail.IsBroken);
                     }
                 }
             }
@@ -239,11 +239,11 @@
             Console.WriteLine($"Клиенты в очереди: {_cars.Count}\n");
             Console.WriteLine("Детали на складе:");
 
-            var detales = _detales.Keys;
+            var details = _details.Keys;
 
-            foreach (var detale in detales)
+            foreach (var detail in details)
             {
-                Console.WriteLine($"{detale.Name} {_detales[detale]}");
+                Console.WriteLine($"{detail.Name} {_details[detail]}");
             }
 
             Console.WriteLine();
@@ -252,13 +252,13 @@
 
     class Factory
     {
-        private List<Detail> _detales;
+        private List<Detail> _details;
 
-        public Factory(List<Detail> detales)
+        public Factory(List<Detail> details)
         {
-            if (detales != null && detales.Count > 0)
+            if (details != null && details.Count > 0)
             {
-                _detales = new List<Detail>(detales);
+                _details = new List<Detail>(details);
             }
             else
             {
@@ -266,13 +266,13 @@
             }
         }
 
-        public List<Detail> MakeDetales()
+        public List<Detail> MakeDetails()
         {
             List<Detail> newList = new List<Detail>();
 
-            foreach (var detale in _detales)
+            foreach (var detail in _details)
             {
-                newList.Add(new Detail(detale.Name, detale.Price, detale.IsBroken));
+                newList.Add(new Detail(detail.Name, detail.Price, detail.IsBroken));
             }
 
             return newList;
@@ -283,9 +283,9 @@
     {
         private List<Detail> _details;
 
-        public Car(List<Detail> detales)
+        public Car(List<Detail> details)
         {
-            _details = new List<Detail>(detales);
+            _details = new List<Detail>(details);
         }
 
         public int MaterialDamage { get; private set; }
@@ -294,9 +294,9 @@
         {
             List<Detail> newList = new List<Detail>();
 
-            foreach (var detale in _details)
+            foreach (var detail in _details)
             {
-                newList.Add(new Detail(detale.Name, detale.Price, detale.IsBroken));
+                newList.Add(new Detail(detail.Name, detail.Price, detail.IsBroken));
             }
 
             return newList;
@@ -304,9 +304,9 @@
 
         public bool IsFixed()
         {
-            foreach (var detale in _details)
+            foreach (var detail in _details)
             {
-                if (detale.IsBroken)
+                if (detail.IsBroken)
                 {
                     return false;
                 }
@@ -319,11 +319,11 @@
         {
             bool isBrokened = false;
 
-            foreach (var detale in _details)
+            foreach (var detail in _details)
             {
                 if (CustomRandom.GetBool(BrokenChanse))
                 {
-                    detale.TakeDamage();
+                    detail.TakeDamage();
                     isBrokened = true;
                 }
             }
@@ -334,7 +334,7 @@
             }
         }
 
-        public void ShowDetales()
+        public void ShowDetails()
         {
             for (int i = 0; i < _details.Count; i++)
             {
@@ -343,18 +343,18 @@
             }
         }
 
-        public void SwichDetale(Detail newDetale)
+        public void SwichDetail(Detail newDetail)
         {
             for (int i = 0; i < _details.Count; i++)
             {
-                if (_details[i].Name == newDetale.Name)
+                if (_details[i].Name == newDetail.Name)
                 {
                     if (_details[i].IsBroken == false)
                     {
                         MaterialDamage = _details[i].Price;
                     }
 
-                    _details[i] = newDetale;
+                    _details[i] = newDetail;
                     break;
                 }
             }

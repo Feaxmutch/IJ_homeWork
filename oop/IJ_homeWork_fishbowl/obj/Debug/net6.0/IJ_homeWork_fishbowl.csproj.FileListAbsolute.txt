@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\bin\Debug\net6.0\IJ_homeWork_fishbowl.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\bin\Debug\net6.0\IJ_homeWork_fishbowl.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\bin\Debug\net6.0\IJ_homeWork_fishbowl.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\bin\Debug\net6.0\IJ_homeWork_fishbowl.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\bin\Debug\net6.0\IJ_homeWork_fishbowl.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\refint\IJ_homeWork_fishbowl.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\IJ_homeWork_fishbowl.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_fishbowl\obj\Debug\net6.0\ref\IJ_homeWork_fishbowl.dll

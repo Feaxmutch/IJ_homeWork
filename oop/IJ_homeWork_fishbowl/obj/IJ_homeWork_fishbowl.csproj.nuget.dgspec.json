@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\данил\\visual_studio_projects\\for_lean\\oop\\IJ_homeWork_fishbowl\\IJ_homeWork_fishbowl.csproj": {}
+  },
+  "projects": {
+    "F:\\данил\\visual_studio_projects\\for_lean\\oop\\IJ_homeWork_fishbowl\\IJ_homeWork_fishbowl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\oop\\IJ_homeWork_fishbowl\\IJ_homeWork_fishbowl.csproj",
+        "projectName": "IJ_homeWork_fishbowl",
+        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\oop\\IJ_homeWork_fishbowl\\IJ_homeWork_fishbowl.csproj",
+        "packagesPath": "C:\\Users\\feaxmutch\\.nuget\\packages\\",
+        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\oop\\IJ_homeWork_fishbowl\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\feaxmutch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\programs\\VisualStudio_Shared": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

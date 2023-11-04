@@ -4,26 +4,14 @@
     {
         static void Main(string[] args)
         {
-            int startOld = 2;
-            int maxOld = 10;
-            Fishbowl fishbowl = new(startOld, maxOld);
+            Fishbowl fishbowl = new();
             fishbowl.Live();
         }
     }
 
     class Fishbowl
     {
-        private List<Fish> _fish = new List<Fish>();
-        private int _startOld;
-        private int _maxOld;
-
-        public Fishbowl(int startOld, int maxOld)
-        {
-            startOld = Math.Max(0, startOld);
-            maxOld = Math.Max(0, maxOld);
-            _maxOld = Math.Max(maxOld, startOld);
-            _startOld = startOld;
-        }
+        private List<Fish> _fishes = new List<Fish>();
 
         public void Live()
         {
@@ -35,13 +23,13 @@
 
             while (isLiving)
             {
-                for (int i = 0; i < _fish.Count; i++)
+                for (int i = _fishes.Count - 1; i >= 0; i--)
                 {
-                    _fish[i].Live();
+                    _fishes[i].AddOld();
 
-                    if (_fish[i].IsAlive == false)
+                    if (_fishes[i].IsAlive == false)
                     {
-                        _fish.Remove(_fish[i]);
+                        _fishes.Remove(_fishes[i]);
                     }
                 }
 
@@ -71,7 +59,37 @@
 
         private void AddFish()
         {
-            _fish.Add(new Fish(_maxOld, _startOld));
+            bool isCreating = true;
+
+            while (isCreating)
+            {
+                Console.Clear();
+
+                Console.Write("Введите стартовый возраст: ");
+                string userInput = Console.ReadLine();
+
+                if (int.TryParse(userInput, out int startOld))
+                {
+                    Console.Write("Введите максимальный возраст: ");
+                    userInput = Console.ReadLine();
+
+                    if (int.TryParse(userInput, out int maxOld))
+                    {
+                        _fishes.Add(new Fish(maxOld, startOld));
+                        isCreating = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("максимальный возраст должен быть числом.");
+                    }
+                }
+                else 
+                {
+                    Console.WriteLine("стартовый возраст должен быть числом.");
+                }
+
+                Console.ReadKey();
+            }
         }
 
         private void RemoveFish()
@@ -83,9 +101,9 @@
 
             if (int.TryParse(enteredNumber, out int fishNumber))
             {
-                if (fishNumber > 0 && fishNumber <= _fish.Count)
+                if (fishNumber > 0 && fishNumber <= _fishes.Count)
                 {
-                    _fish.RemoveAt(fishNumber - 1);
+                    _fishes.RemoveAt(fishNumber - 1);
                 }
                 else
                 {
@@ -102,9 +120,9 @@
 
         private void ShowInfo()
         {
-            for (int i = 0; i < _fish.Count; i++)
+            for (int i = 0; i < _fishes.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Возраст: {_fish[i].Old}");
+                Console.WriteLine($"{i + 1}. Возраст: {_fishes[i].Old}");
             }
         }
     }
@@ -125,7 +143,7 @@
 
         public bool IsAlive { get => Old <= _maxOld; }
 
-        public void Live()
+        public void AddOld()
         {
             Old++;
         }

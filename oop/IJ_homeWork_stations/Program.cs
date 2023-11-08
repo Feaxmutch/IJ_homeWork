@@ -56,11 +56,11 @@
             MaxCapasity = Math.Max(minCapacity, maxСapacity);
         }
 
+        public int Position { get; private set; }
+
         private int MinCapasity { get; }
 
         private int MaxCapasity { get; }
-
-        public int Position { get; private set; }
 
         public void TakePeoples(int quantity)
         {

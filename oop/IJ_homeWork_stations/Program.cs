@@ -18,8 +18,10 @@
         }
     }
 
-    static class OtherMethods
+    static class Utilits
     {
+        private static Random _random = new Random();
+
         public static bool TryGetNumberFromUser(string massage, out int parsedNumber)
         {
             Console.Write(massage);
@@ -45,12 +47,11 @@
             parsedNumber = 0;
             return false;
         }
-    }
 
-    static class StaticRandom
-    {
-        private static Random s_random = new();
-        public static Random Random { get => s_random;  }
+        public static int GetRandomNumber(int minValue, int maxValue)
+        {
+            return _random.Next(minValue, maxValue);
+        }
     }
 
     class Configurator
@@ -151,13 +152,13 @@
 
             Console.WriteLine("Станции:");
             ShowStations();
-            if (OtherMethods.TryGetNumberFromUser("Введите номер стартовой станции: ", out int number))
+            if (Utilits.TryGetNumberFromUser("Введите номер стартовой станции: ", out int number))
             {
                 if (number > 0 && number <= _stations.Count)
                 {
                     int startNumber = number;
 
-                    if (OtherMethods.TryGetNumberFromUser("Введите номер конечной станции: ", out number))
+                    if (Utilits.TryGetNumberFromUser("Введите номер конечной станции: ", out number))
                     {
                         if (number > 0 && number <= _stations.Count)
                         {
@@ -165,7 +166,7 @@
                             {
                                 int endNumber = number;
                                 _trains.Add(new Train(_stations[startNumber - 1].Position, new Station(_stations[endNumber - 1].Name, _stations[endNumber - 1].Position)));
-                                _trains[_trains.Count - 1].TakePeoples(StaticRandom.Random.Next(MinPeoples, MaxPeoples));
+                                _trains[_trains.Count - 1].TakePeoples(Utilits.GetRandomNumber(MinPeoples, MaxPeoples));
                                 isComplete = true;
                             }
                             else
@@ -237,7 +238,7 @@
         {
             while (quantity > 0)
             {
-                AddWagon(StaticRandom.Random.Next(MinCapasity, MaxCapasity));
+                AddWagon(Utilits.GetRandomNumber(MinCapasity, MaxCapasity));
                 Wagon currentWagon = _wagons[_wagons.Count - 1];
 
                 if (quantity > currentWagon.Сapacity)

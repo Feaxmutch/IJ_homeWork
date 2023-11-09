@@ -50,7 +50,7 @@
     static class StaticRandom
     {
         private static Random s_random = new();
-        public static Random S_Random { get => s_random;  }
+        public static Random Random { get => s_random;  }
     }
 
     class Configurator
@@ -165,7 +165,7 @@
                             {
                                 int endNumber = number;
                                 _trains.Add(new Train(_stations[startNumber - 1].Position, new Station(_stations[endNumber - 1].Name, _stations[endNumber - 1].Position)));
-                                _trains[_trains.Count - 1].TakePeoples(StaticRandom.S_Random.Next(MinPeoples, MaxPeoples));
+                                _trains[_trains.Count - 1].TakePeoples(StaticRandom.Random.Next(MinPeoples, MaxPeoples));
                                 isComplete = true;
                             }
                             else
@@ -237,7 +237,7 @@
         {
             while (quantity > 0)
             {
-                AddWagon(StaticRandom.S_Random.Next(MinCapasity, MaxCapasity));
+                AddWagon(StaticRandom.Random.Next(MinCapasity, MaxCapasity));
                 Wagon currentWagon = _wagons[_wagons.Count - 1];
 
                 if (quantity > currentWagon.Сapacity)

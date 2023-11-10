@@ -321,7 +321,7 @@
         {
             for (int i = 0; i < _wagons.Count; i++)
             {
-                Console.WriteLine($"вагоне {i + 1}, с размером на {_wagons[i].Сapacity} человек, находится {_wagons[i].Peoples} пасажиров");
+                Console.WriteLine($"вагоне {i + 1}, с размером на {_wagons[i].Сapacity} человек, находится {_wagons[i].Peoples} пассажиров");
             }
         }
 
@@ -329,8 +329,6 @@
         {
             _wagons.Add(new Wagon(capasity));
         }
-
-        
     }
 
     class Wagon

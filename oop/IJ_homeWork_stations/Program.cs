@@ -126,7 +126,8 @@
         {
             int distance;
             int peoplesCount;
-            string name;
+            string startName;
+            string endName;
 
             Console.WriteLine("Активные Маршруты:");
 
@@ -142,8 +143,10 @@
                 }
 
                 peoplesCount = train.GetAllPeoplesCount();
-                name = train.Destination.Name;
-                Console.WriteLine($"До прибытия в \"{name}\" осталось {distance} шагов. Едет {peoplesCount} пассажиров");
+                startName = train.StartStation.Name;
+                endName = train.Destination.Name;
+                Console.WriteLine($"От станции \"{startName}\" до станции \"{endName}\" осталось {distance} шагов. Едет {peoplesCount} пассажиров");
+                train.ShowWagonsInfo();
             }
         }
 
@@ -164,13 +167,15 @@
 
             if (TryGetStartNumber(out int startNumber))
             {
-                if (tryGetEndNumber(startNumber, out int endNumber))
+                if (TryGetEndNumber(startNumber, out int endNumber))
                 {
                     int startPosition = _stations[startNumber - 1].Position;
-                    int endPosition = _stations[endNumber - 1].Position;
-                    string stationName = _stations[endNumber - 1].Name;
-                    Station stationDestination = new Station(stationName, endPosition);
-                    Train newTrain = new(startPosition, stationDestination);
+                    int destinationPosition = _stations[endNumber - 1].Position;
+                    string startName = _stations[startNumber - 1].Name;
+                    string destinationName = _stations[endNumber - 1].Name;
+                    Station startStation = new Station(startName, startPosition);
+                    Station Destination = new Station(destinationName, destinationPosition);
+                    Train newTrain = new(startStation, Destination);
                     newTrain.TakePeoples(Utilits.GetRandomNumber(MinPeoples, MaxPeoples));
                     _trains.Add(newTrain);
                     isComplete = true;
@@ -208,7 +213,7 @@
             return false;
         }
 
-        private bool tryGetEndNumber(int startNumber, out int endNumber)
+        private bool TryGetEndNumber(int startNumber, out int endNumber)
         {
             if (Utilits.TryGetNumberFromUser("Введите номер конечной станции: ", out int number))
             {
@@ -257,15 +262,18 @@
     {
         private List<Wagon> _wagons = new();
 
-        public Train(int position, Station destination)
+        public Train(Station startStation, Station destination)
         {
-            Position = Math.Abs(position);
+            StartStation = new Station(startStation.Name, startStation.Position);
             Destination = new Station(destination.Name, destination.Position);
+            Position = StartStation.Position;
             MinCapasity = 1;
             MaxCapasity = 54;
         }
 
         public int Position { get; private set; }
+
+        public Station StartStation { get; }
 
         public Station Destination { get; }
 
@@ -309,10 +317,20 @@
             return peoples;
         }
 
+        public void ShowWagonsInfo()
+        {
+            for (int i = 0; i < _wagons.Count; i++)
+            {
+                Console.WriteLine($"вагоне {i + 1}, с размером на {_wagons[i].Сapacity} человек, находится {_wagons[i].Peoples} пасажиров");
+            }
+        }
+
         private void AddWagon(int capasity)
         {
             _wagons.Add(new Wagon(capasity));
         }
+
+        
     }
 
     class Wagon

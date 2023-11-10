@@ -20,7 +20,7 @@
 
     static class Utilits
     {
-        private static Random _random = new Random();
+        private static Random s_random = new Random();
 
         public static bool TryGetNumberFromUser(string massage, out int parsedNumber)
         {
@@ -50,7 +50,7 @@
 
         public static int GetRandomNumber(int minValue, int maxValue)
         {
-            return _random.Next(minValue, maxValue);
+            return s_random.Next(minValue, maxValue);
         }
     }
 
@@ -73,6 +73,7 @@
                     if (_stations[i].Position == _stations[j].Position)
                     {
                         _stations.RemoveAt(i);
+                        break;
                     }
                 }
             }
@@ -87,10 +88,18 @@
 
         public void Work()
         {
+            ConsoleKey escapeKey = ConsoleKey.Escape;
             bool isWorking = true;
 
             while (isWorking)
             {
+                Console.WriteLine($"Нажмите {escapeKey} если хотите закрыть приложение, или любую клавишу для продолжения");
+
+                if (Console.ReadKey().Key == escapeKey)
+                {
+                    return;
+                }
+
                 Console.Clear();
 
                 for (int i = _trains.Count - 1; i >= 0; i--)
@@ -101,7 +110,7 @@
                     }
                 }
 
-                ShowRoutes();
+                ShowTrains();
                 Console.WriteLine();
 
                 foreach (var train in _trains)
@@ -109,11 +118,11 @@
                     train.Move();
                 }
 
-                AddRoute();
+                AddTrain();
             }
         }
 
-        private void ShowRoutes()
+        private void ShowTrains()
         {
             int distance;
             int peoplesCount;
@@ -146,38 +155,73 @@
             }
         }
 
-        private void AddRoute()
+        private void AddTrain()
         {
             bool isComplete = false;
 
             Console.WriteLine("Станции:");
             ShowStations();
+
+            if (TryGetStartNumber(out int startNumber))
+            {
+                if (tryGetEndNumber(startNumber, out int endNumber))
+                {
+                    int startPosition = _stations[startNumber - 1].Position;
+                    int endPosition = _stations[endNumber - 1].Position;
+                    string stationName = _stations[endNumber - 1].Name;
+                    Station stationDestination = new Station(stationName, endPosition);
+                    Train newTrain = new(startPosition, stationDestination);
+                    newTrain.TakePeoples(Utilits.GetRandomNumber(MinPeoples, MaxPeoples));
+                    _trains.Add(newTrain);
+                    isComplete = true;
+                }
+            }
+
+            if (isComplete)
+            {
+                Console.WriteLine($"Поезд и маршрут для него созданы. На данный маршрут было продано {_trains[_trains.Count - 1].GetAllPeoplesCount()} билетов");
+            }
+            else
+            {
+                Console.WriteLine("Поезд не создан.");
+            }
+
+            Console.ReadKey();
+        }
+
+        private bool TryGetStartNumber(out int startNumber)
+        {
             if (Utilits.TryGetNumberFromUser("Введите номер стартовой станции: ", out int number))
             {
-                if (number > 0 && number <= _stations.Count)
+                if (StationNumberExists(number))
                 {
-                    int startNumber = number;
+                    startNumber = number;
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"Номера {number} нет в списке станций");
+                }
+            }
 
-                    if (Utilits.TryGetNumberFromUser("Введите номер конечной станции: ", out number))
+            startNumber = 0;
+            return false;
+        }
+
+        private bool tryGetEndNumber(int startNumber, out int endNumber)
+        {
+            if (Utilits.TryGetNumberFromUser("Введите номер конечной станции: ", out int number))
+            {
+                if (StationNumberExists(number))
+                {
+                    if (number != startNumber)
                     {
-                        if (number > 0 && number <= _stations.Count)
-                        {
-                            if (number != startNumber)
-                            {
-                                int endNumber = number;
-                                _trains.Add(new Train(_stations[startNumber - 1].Position, new Station(_stations[endNumber - 1].Name, _stations[endNumber - 1].Position)));
-                                _trains[_trains.Count - 1].TakePeoples(Utilits.GetRandomNumber(MinPeoples, MaxPeoples));
-                                isComplete = true;
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Номер стартовой и конечной станции не должны совпадать.");
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Номера {number} нет в списке станций");
-                        }
+                        endNumber = number;
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Номер стартовой и конечной станции не должны совпадать.");
                     }
                 }
                 else
@@ -186,16 +230,13 @@
                 }
             }
 
-            if (isComplete)
-            {
-                Console.WriteLine($"Маршрут создан. На данный маршрут было продано {_trains[_trains.Count - 1].GetAllPeoplesCount()} билетов");
-            }
-            else
-            {
-                Console.WriteLine("Маршрут не создан.");
-            }
+            endNumber = 0;
+            return false;
+        }
 
-            Console.ReadKey();
+        private bool StationNumberExists(int number)
+        {
+            return number > 0 && number <= _stations.Count;
         }
     }
 
@@ -240,17 +281,7 @@
             {
                 AddWagon(Utilits.GetRandomNumber(MinCapasity, MaxCapasity));
                 Wagon currentWagon = _wagons[_wagons.Count - 1];
-
-                if (quantity > currentWagon.Сapacity)
-                {
-                    _wagons[_wagons.Count - 1].AddPeoples(currentWagon.Сapacity);
-                    quantity -= currentWagon.Сapacity;
-                }
-                else
-                {
-                    _wagons[_wagons.Count - 1].AddPeoples(quantity);
-                    quantity = 0;
-                }
+                quantity = currentWagon.AddPeoples(quantity);
             }
         }
 
@@ -286,9 +317,9 @@
 
     class Wagon
     {
-        public Wagon(int Capacity)
+        public Wagon(int capacity)
         {
-            Сapacity = Capacity;
+            Сapacity = capacity;
             Peoples = 0;
         }
 
@@ -296,9 +327,19 @@
 
         public int Сapacity { get; }
 
-        public void AddPeoples(int quantity)
+        public int AddPeoples(int quantity)
         {
-            Peoples += Math.Min(Сapacity - Peoples, Math.Max(0, quantity));
+            if (quantity > Сapacity - Peoples)
+            {
+                quantity -= Сapacity - Peoples;
+                Peoples = Сapacity;
+                return quantity;
+            }
+            else
+            {
+                Peoples += Math.Max(0, quantity);
+                return 0;
+            }
         }
     }
 }

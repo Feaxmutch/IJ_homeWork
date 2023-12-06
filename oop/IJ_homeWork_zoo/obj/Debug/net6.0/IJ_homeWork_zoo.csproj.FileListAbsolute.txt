@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\bin\Debug\net6.0\IJ_homeWork_zoo.exe
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\bin\Debug\net6.0\IJ_homeWork_zoo.deps.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\bin\Debug\net6.0\IJ_homeWork_zoo.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\bin\Debug\net6.0\IJ_homeWork_zoo.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\bin\Debug\net6.0\IJ_homeWork_zoo.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\refint\IJ_homeWork_zoo.dll
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.pdb
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\IJ_homeWork_zoo.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\oop\IJ_homeWork_zoo\obj\Debug\net6.0\ref\IJ_homeWork_zoo.dll

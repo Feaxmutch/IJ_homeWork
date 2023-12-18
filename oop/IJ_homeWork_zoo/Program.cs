@@ -4,32 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Dictionary<int,int> animalCounts = new();
-            Dictionary<int,Animal> animalTypes = new();
             List<Aviary> aviaries = new();
+            List<Animal> animals = new();
+            Dictionary<Animal, int> animalCounts = new();
 
-            int snakeIndex = 0;
-            int owlIndex = 1;
-            int tigerIndex = 2;
-            int gooseIndex = 3;
+            animalCounts[new Snake(Gender.Male)] = 4;
+            animalCounts[new Owl(Gender.Male)] = 2;
+            animalCounts[new Tiger(Gender.Male)] = 3;
+            animalCounts[new Goose(Gender.Male)] = 5;
 
-            animalCounts[snakeIndex] = 4;
-            animalCounts[owlIndex] = 2;
-            animalCounts[tigerIndex] = 3;
-            animalCounts[gooseIndex] = 5;
+            Dictionary<Animal, int>.KeyCollection animalTypes = animalCounts.Keys;
 
-            animalTypes[snakeIndex] = new Snake(Gender.Male);
-            animalTypes[owlIndex] = new Owl(Gender.Male);
-            animalTypes[tigerIndex] = new Tiger(Gender.Male);
-            animalTypes[gooseIndex] = new Goose(Gender.Male);
-
-            for (int i = 0; i < animalTypes.Count; i++)
+            foreach (var animalType in animalTypes)
             {
-                List<Animal> animals = new();
+                animals.Clear();
 
-                for (int j = 0; j < animalCounts[i]; j++)
+                for (int i = 0; i < animalCounts[animalType]; i++)
                 {
-                    animals.Add(animalTypes[i].Clone(true));
+                    animals.Add(animalType.Clone(true));
                 }
 
                 aviaries.Add(new Aviary(animals));
@@ -299,7 +291,7 @@
             }
         }
     }
-
+    
     enum Gender
     {
         Male,

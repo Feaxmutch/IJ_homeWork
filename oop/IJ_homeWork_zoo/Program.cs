@@ -4,26 +4,37 @@
     {
         static void Main(string[] args)
         {
-            int snakesCount = 3;
-            int owlsCount = 1;
-
-            Random random = new();
+            Dictionary<int,int> animalCounts = new();
+            Dictionary<int,Animal> animalTypes = new();
             List<Aviary> aviaries = new();
-            List<Animal> snakes = new();
-            List<Animal> owls = new();
 
-            for (int i = 0; i < snakesCount; i++)
+            int snakeIndex = 0;
+            int owlIndex = 1;
+            int tigerIndex = 2;
+            int gooseIndex = 3;
+
+            animalCounts[snakeIndex] = 4;
+            animalCounts[owlIndex] = 2;
+            animalCounts[tigerIndex] = 3;
+            animalCounts[gooseIndex] = 5;
+
+            animalTypes[snakeIndex] = new Snake(Gender.Male);
+            animalTypes[owlIndex] = new Owl(Gender.Male);
+            animalTypes[tigerIndex] = new Tiger(Gender.Male);
+            animalTypes[gooseIndex] = new Goose(Gender.Male);
+
+            for (int i = 0; i < animalTypes.Count; i++)
             {
-                snakes.Add(new Snake((Gender)random.Next((int)Gender.Male, (int)Gender.Female + 1)));
-            }
-            
-            for (int i = 0; i < owlsCount; i++)
-            {
-                owls.Add(new Owl((Gender)random.Next((int)Gender.Male, (int)Gender.Female + 1)));
+                List<Animal> animals = new();
+
+                for (int j = 0; j < animalCounts[i]; j++)
+                {
+                    animals.Add(animalTypes[i].Clone(true));
+                }
+
+                aviaries.Add(new Aviary(animals));
             }
 
-            aviaries.Add(new Aviary(snakes));
-            aviaries.Add(new Aviary(owls));
             Zoo zoo = new(aviaries);
             zoo.Open();
         }
@@ -31,6 +42,8 @@
 
     static class Utilits
     {
+        private static Random s_random = new();
+
         public static bool TryGetNumberFromUser(string input, out int number )
         {
             number = 0;
@@ -50,6 +63,13 @@
             }
 
             return parseIsSuccessfull;
+        }
+
+        public static Gender GetRandomGender()
+        {
+            int maleIndex = (int)Gender.Male;
+            int femaleIndex = (int)Gender.Female;
+            return (Gender)s_random.Next(maleIndex, femaleIndex + 1);
         }
     }
 
@@ -168,16 +188,7 @@
 
             foreach (var animal in OriginalList)
             {
-                switch (animal)
-                {
-                    case Snake:
-                        newList.Add(new Snake(animal.Gender));
-                        break;
-
-                    case Owl:
-                        newList.Add(new Owl(animal.Gender));
-                        break;
-                }
+                newList.Add(animal.Clone());
             }
 
             return newList;
@@ -197,6 +208,8 @@
         public Gender Gender { get; }
 
         public abstract void MakeSound();
+
+        public abstract Animal Clone(bool randomGender = false);
     } 
 
     class Snake : Animal
@@ -206,6 +219,18 @@
         public override void MakeSound()
         {
             Console.Write("Ш-ш-ш-ш");
+        }
+
+        public override Animal Clone(bool randomGender = false)
+        {
+            if (randomGender)
+            {
+                return new Snake(Utilits.GetRandomGender());
+            }
+            else
+            {
+                return new Snake(Gender);
+            }
         }
     }
 
@@ -217,8 +242,64 @@
         {
             Console.Write("ух - ух");
         }
+
+        public override Animal Clone(bool randomGender = false)
+        {
+            if (randomGender)
+            {
+                return new Owl(Utilits.GetRandomGender());
+            }
+            else
+            {
+                return new Owl(Gender);
+            }
+        }
     }
-    
+
+    class Tiger : Animal
+    {
+        public Tiger(Gender gender) : base("тигр", gender) { }
+
+        public override void MakeSound()
+        {
+            Console.Write("РРРР");
+        }
+
+        public override Animal Clone(bool randomGender = false)
+        {
+            if (randomGender)
+            {
+                return new Tiger(Utilits.GetRandomGender());
+            }
+            else
+            {
+                return new Tiger(Gender);
+            }
+        }
+    }
+
+    class Goose : Animal
+    {
+        public Goose(Gender gender) : base("гусь", gender) { }
+
+        public override void MakeSound()
+        {
+            Console.Write("га-га-га");
+        }
+
+        public override Animal Clone(bool randomGender = false)
+        {
+            if (randomGender)
+            {
+                return new Goose(Utilits.GetRandomGender());
+            }
+            else
+            {
+                return new Goose(Gender);
+            }
+        }
+    }
+
     enum Gender
     {
         Male,

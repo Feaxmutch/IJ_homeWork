@@ -89,7 +89,7 @@
 
                 for (int j = 0; j < animalCounts[i]; j++)
                 {
-                    animalGrops[i].Add(_animalTypes[i].Clone());
+                    animalGrops[i].Add(_animalTypes[i].Clone(true));
                 }
             }
 

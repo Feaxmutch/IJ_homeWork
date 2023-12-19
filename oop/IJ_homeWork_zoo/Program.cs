@@ -4,27 +4,29 @@
     {
         static void Main(string[] args)
         {
-            List<Aviary> aviaries = new();
-            List<Animal> animals = new();
-            Dictionary<Animal, int> animalCounts = new();
-
-            animalCounts[new Snake(Gender.Male)] = 4;
-            animalCounts[new Owl(Gender.Male)] = 2;
-            animalCounts[new Tiger(Gender.Male)] = 3;
-            animalCounts[new Goose(Gender.Male)] = 5;
-
-            Dictionary<Animal, int>.KeyCollection animalTypes = animalCounts.Keys;
-
-            foreach (var animalType in animalTypes)
+            List<Animal> animalTypes = new()
             {
-                animals.Clear();
+                new Snake(Gender.Male),
+                new Owl(Gender.Male),
+                new Tiger(Gender.Male),
+                new Goose(Gender.Male)
+            };
 
-                for (int i = 0; i < animalCounts[animalType]; i++)
-                {
-                    animals.Add(animalType.Clone(true));
-                }
+            List<int> animalCounts = new()
+            {
+                4,
+                2,
+                3,
+                5
+            };
 
-                aviaries.Add(new Aviary(animals));
+            AnimalsCreator animalsCreator = new(animalTypes);
+            var animalGrops = animalsCreator.Create(animalCounts);
+            List<Aviary> aviaries = new();
+
+            for (int i = 0; i < animalGrops.Count; i++)
+            {
+                aviaries.Add(new Aviary(animalGrops[i]));
             }
 
             Zoo zoo = new(aviaries);
@@ -36,7 +38,7 @@
     {
         private static Random s_random = new();
 
-        public static bool TryGetNumberFromUser(string input, out int number )
+        public static bool TryGetNumberFromUser(string input, out int number)
         {
             number = 0;
             bool parseIsSuccessfull = false;
@@ -62,6 +64,36 @@
             int maleIndex = (int)Gender.Male;
             int femaleIndex = (int)Gender.Female;
             return (Gender)s_random.Next(maleIndex, femaleIndex + 1);
+        }
+    }
+
+    class AnimalsCreator
+    {
+        private List<Animal> _animalTypes = new();
+
+        public AnimalsCreator(List<Animal> animalTypes)
+        {
+            foreach (var animal in animalTypes)
+            {
+                _animalTypes.Add(animal.Clone());
+            }
+        }
+
+        public List<List<Animal>> Create(List<int> animalCounts)
+        {
+            List<List<Animal>> animalGrops = new();
+
+            for (int i = 0; i < _animalTypes.Count; i++)
+            {
+                animalGrops.Add(new List<Animal>());
+
+                for (int j = 0; j < animalCounts[i]; j++)
+                {
+                    animalGrops[i].Add(_animalTypes[i].Clone());
+                }
+            }
+
+            return animalGrops;
         }
     }
 
@@ -160,7 +192,7 @@
         }
     }
 
-    class Aviary 
+    class Aviary
     {
         private List<Animal> _animals = new List<Animal>();
 
@@ -169,7 +201,7 @@
             _animals = GetAnimalsCopy(animals);
         }
 
-        public List<Animal> Animals 
+        public List<Animal> Animals
         {
             get => GetAnimalsCopy(_animals);
         }
@@ -202,11 +234,11 @@
         public abstract void MakeSound();
 
         public abstract Animal Clone(bool randomGender = false);
-    } 
+    }
 
     class Snake : Animal
     {
-        public Snake(Gender gender) : base("змея", gender){}
+        public Snake(Gender gender) : base("змея", gender) { }
 
         public override void MakeSound()
         {
@@ -228,7 +260,7 @@
 
     class Owl : Animal
     {
-        public Owl(Gender gender) : base("сова", gender){}
+        public Owl(Gender gender) : base("сова", gender) { }
 
         public override void MakeSound()
         {
@@ -291,7 +323,7 @@
             }
         }
     }
-    
+
     enum Gender
     {
         Male,

@@ -38,27 +38,6 @@
     {
         private static Random s_random = new();
 
-        public static bool TryGetNumberFromUse(string input, out int number)
-        {
-            number = 0;
-            bool parseIsSuccessfull = false;
-
-            if (input == string.Empty)
-            {
-                Console.WriteLine("Вы ничего не ввели");
-            }
-            else if (int.TryParse(input, out number) == false)
-            {
-                Console.WriteLine($"Не получилось конвертировать \"{input}\" в число");
-            }
-            else
-            {
-                parseIsSuccessfull = true;
-            }
-
-            return parseIsSuccessfull;
-        }
-
         public static Gender GetRandomGender()
         {
             int maleIndex = (int)Gender.Male;

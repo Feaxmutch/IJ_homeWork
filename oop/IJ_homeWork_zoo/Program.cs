@@ -38,7 +38,7 @@
     {
         private static Random s_random = new();
 
-        public static bool TryGetNumberFromUser(string input, out int number)
+        public static bool TryGetNumberFromUse(string input, out int number)
         {
             number = 0;
             bool parseIsSuccessfull = false;
@@ -175,7 +175,15 @@
 
         private void TrySelectAviary(string input)
         {
-            if (Utilits.TryGetNumberFromUser(input, out int aviaryNumber))
+            if (input == string.Empty)
+            {
+                Console.WriteLine("Вы ничего не ввели");
+            }
+            else if (int.TryParse(input, out int aviaryNumber) == false)
+            {
+                Console.WriteLine($"Не получилось конвертировать \"{input}\" в число");
+            }
+            else
             {
                 if (aviaryNumber > 0 && aviaryNumber <= _aviaries.Count)
                 {
@@ -194,28 +202,16 @@
 
     class Aviary
     {
-        private List<Animal> _animals = new List<Animal>();
+        private IReadOnlyList<Animal> _animals;
 
-        public Aviary(List<Animal> animals)
+        public Aviary(IReadOnlyList<Animal> animals)
         {
-            _animals = GetAnimalsCopy(animals);
+            _animals = animals;
         }
 
-        public List<Animal> Animals
+        public IReadOnlyList<Animal> Animals
         {
-            get => GetAnimalsCopy(_animals);
-        }
-
-        private List<Animal> GetAnimalsCopy(List<Animal> OriginalList)
-        {
-            List<Animal> newList = new();
-
-            foreach (var animal in OriginalList)
-            {
-                newList.Add(animal.Clone());
-            }
-
-            return newList;
+            get => _animals;
         }
     }
 

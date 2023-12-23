@@ -6,10 +6,10 @@
         {
             List<Animal> animalTypes = new()
             {
-                new Snake(Gender.Male),
-                new Owl(Gender.Male),
-                new Tiger(Gender.Male),
-                new Goose(Gender.Male)
+                new Animal("змея", "Ш-ш-ш-ш", Gender.Male),
+                new Animal("сова", "ух - ух", Gender.Male),
+                new Animal("тигр", "РРРР", Gender.Male),
+                new Animal("гусь", "га-га-га", Gender.Male),
             };
 
             List<int> animalCounts = new()
@@ -43,6 +43,18 @@
             int maleIndex = (int)Gender.Male;
             int femaleIndex = (int)Gender.Female;
             return (Gender)s_random.Next(maleIndex, femaleIndex + 1);
+        }
+
+        public static List<Animal> CopyList(List<Animal> originalList)
+        {
+            List<Animal> newList = new();
+
+            foreach (var animal in originalList)
+            {
+                newList.Add(animal.Clone());
+            }
+
+            return newList;
         }
     }
 
@@ -181,24 +193,27 @@
 
     class Aviary
     {
-        private IReadOnlyList<Animal> _animals;
+        private List<Animal> _animals;
 
-        public Aviary(IReadOnlyList<Animal> animals)
+        public Aviary(List<Animal> animals)
         {
             _animals = animals;
         }
 
-        public IReadOnlyList<Animal> Animals
+        public List<Animal> Animals
         {
-            get => _animals;
+            get => Utilits.CopyList(_animals);
         }
     }
 
-    abstract class Animal
+    class Animal
     {
-        public Animal(string name, Gender gender)
+        private string _sound;
+
+        public Animal(string name, string sound, Gender gender)
         {
             Name = name;
+            _sound = sound;
             Gender = gender;
         }
 
@@ -206,95 +221,20 @@
 
         public Gender Gender { get; }
 
-        public abstract void MakeSound();
-
-        public abstract Animal Clone(bool randomGender = false);
-    }
-
-    class Snake : Animal
-    {
-        public Snake(Gender gender) : base("змея", gender) { }
-
-        public override void MakeSound()
+        public void MakeSound()
         {
-            Console.Write("Ш-ш-ш-ш");
+            Console.Write(_sound);
         }
 
-        public override Animal Clone(bool randomGender = false)
+        public Animal Clone(bool randomGender = false)
         {
             if (randomGender)
             {
-                return new Snake(Utilits.GetRandomGender());
+                return new Animal(Name, _sound, Utilits.GetRandomGender());
             }
             else
             {
-                return new Snake(Gender);
-            }
-        }
-    }
-
-    class Owl : Animal
-    {
-        public Owl(Gender gender) : base("сова", gender) { }
-
-        public override void MakeSound()
-        {
-            Console.Write("ух - ух");
-        }
-
-        public override Animal Clone(bool randomGender = false)
-        {
-            if (randomGender)
-            {
-                return new Owl(Utilits.GetRandomGender());
-            }
-            else
-            {
-                return new Owl(Gender);
-            }
-        }
-    }
-
-    class Tiger : Animal
-    {
-        public Tiger(Gender gender) : base("тигр", gender) { }
-
-        public override void MakeSound()
-        {
-            Console.Write("РРРР");
-        }
-
-        public override Animal Clone(bool randomGender = false)
-        {
-            if (randomGender)
-            {
-                return new Tiger(Utilits.GetRandomGender());
-            }
-            else
-            {
-                return new Tiger(Gender);
-            }
-        }
-    }
-
-    class Goose : Animal
-    {
-        public Goose(Gender gender) : base("гусь", gender) { }
-
-        public override void MakeSound()
-        {
-            Console.Write("га-га-га");
-        }
-
-        public override Animal Clone(bool randomGender = false)
-        {
-            if (randomGender)
-            {
-                return new Goose(Utilits.GetRandomGender());
-            }
-            else
-            {
-                return new Goose(Gender);
+                return new Animal(Name, _sound, Gender);
             }
         }
     }

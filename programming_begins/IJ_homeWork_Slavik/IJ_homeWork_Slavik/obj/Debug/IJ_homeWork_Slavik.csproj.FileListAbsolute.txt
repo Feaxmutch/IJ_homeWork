@@ -6,3 +6,11 @@ F:\данил\visual_studio_projects\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\D
 F:\данил\visual_studio_projects\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.csproj.CoreCompileInputs.cache
 F:\данил\visual_studio_projects\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.exe
 F:\данил\visual_studio_projects\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.pdb
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\bin\Debug\IJ_homeWork_Slavik.exe.config
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\bin\Debug\IJ_homeWork_Slavik.exe
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\bin\Debug\IJ_homeWork_Slavik.pdb
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.csproj.SuggestedBindingRedirects.cache
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.exe
+F:\данил\visual_studio_projects\for_lean\programming_begins\IJ_homeWork_Slavik\IJ_homeWork_Slavik\obj\Debug\IJ_homeWork_Slavik.pdb

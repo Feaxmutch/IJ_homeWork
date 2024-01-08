@@ -13,7 +13,8 @@
             bool isMission = false;
             char shotButton = 'z';
             uint repairKits = 23;
-            double xPlanetСordinate = 4235345.534532, yPlanetСordinate = 3949.546677;
+            double xPlanetСordinate = 4235345.534532;
+            double yPlanetСordinate = 3949.546677;
         }
     }
 }

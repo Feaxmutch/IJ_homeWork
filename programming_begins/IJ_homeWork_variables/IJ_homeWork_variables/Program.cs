@@ -10,7 +10,7 @@
             float playerDamageResistance = 0.6f;
             short playerWeaponDamage = 12;
             byte enemysOnLocation = 0;
-            bool onMission = false;
+            bool isMission = false;
             char shotButton = 'z';
             uint repairKits = 23;
             double xPlanetСordinate = 4235345.534532, yPlanetСordinate = 3949.546677;

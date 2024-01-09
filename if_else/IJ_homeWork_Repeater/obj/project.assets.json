@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\feaxmutch\\.nuget\\packages\\": {},
-    "F:\\programs\\Visual Studio_Shared\\NuGetPackages": {}
+    "C:\\Users\\feaxmutch\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_Repeater\\IJ_homeWork_Repeater.csproj",
+      "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_Repeater\\IJ_homeWork_Repeater.csproj",
       "projectName": "IJ_homeWork_Repeater",
-      "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_Repeater\\IJ_homeWork_Repeater.csproj",
+      "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_Repeater\\IJ_homeWork_Repeater.csproj",
       "packagesPath": "C:\\Users\\feaxmutch\\.nuget\\packages\\",
-      "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_Repeater\\obj\\",
+      "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_Repeater\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "F:\\programs\\Visual Studio_Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\feaxmutch\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

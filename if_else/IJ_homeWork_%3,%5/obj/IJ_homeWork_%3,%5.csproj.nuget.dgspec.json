@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj": {}
+    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj": {}
   },
   "projects": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj": {
+    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj",
+        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj",
         "projectName": "IJ_homeWork_%3,%5",
-        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj",
+        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_%3,%5\\IJ_homeWork_%3,%5.csproj",
         "packagesPath": "C:\\Users\\feaxmutch\\.nuget\\packages\\",
-        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_%3,%5\\obj\\",
+        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_%3,%5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\feaxmutch\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

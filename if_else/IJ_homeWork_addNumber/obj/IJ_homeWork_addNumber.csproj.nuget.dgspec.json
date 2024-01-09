@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj": {}
+    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj": {}
   },
   "projects": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj": {
+    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj",
+        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj",
         "projectName": "IJ_homeWork_addNumber",
-        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj",
+        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_addNumber\\IJ_homeWork_addNumber.csproj",
         "packagesPath": "C:\\Users\\feaxmutch\\.nuget\\packages\\",
-        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\IJ_homeWork_addNumber\\obj\\",
+        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_addNumber\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "F:\\programs\\Visual Studio_Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\feaxmutch\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

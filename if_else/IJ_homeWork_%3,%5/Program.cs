@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
+            Random random = new();
             int result = 0;
             int numberMultiplicity1 = 3;
             int numberMultiplicity2 = 5;

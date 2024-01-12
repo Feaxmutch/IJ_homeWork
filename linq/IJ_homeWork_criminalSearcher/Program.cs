@@ -66,10 +66,10 @@
                         Console.WriteLine("Введите национальность:");
                         string nationality = Console.ReadLine();
 
-                        var searchResult = _criminals.Where(criminal => criminal.Height == height);
-                        searchResult = searchResult.Where(criminal => criminal.Weight == weight);
-                        searchResult = searchResult.Where(criminal => criminal.Nationality.ToUpper() == nationality.ToUpper());
-                        searchResult = searchResult.Where(criminal => criminal.Arrested == false);
+                        var searchResult = _criminals.Where(criminal => criminal.Height == height &&
+                                                                         criminal.Weight == weight &&
+                                                                         criminal.Nationality.ToUpper() == nationality.ToUpper() &&
+                                                                         criminal.Arrested == false);
 
                         Console.WriteLine();
                         ShowResult(searchResult.ToList());

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_exchangeRate\\IJ_homeWork_exchangeRate.csproj": {}
+    "F:\\данил\\visual_studio_projects\\for_lean\\linq\\IJ_homeWork_criminalSearcher\\IJ_homeWork_criminalSearcher.csproj": {}
   },
   "projects": {
-    "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_exchangeRate\\IJ_homeWork_exchangeRate.csproj": {
+    "F:\\данил\\visual_studio_projects\\for_lean\\linq\\IJ_homeWork_criminalSearcher\\IJ_homeWork_criminalSearcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_exchangeRate\\IJ_homeWork_exchangeRate.csproj",
-        "projectName": "IJ_homeWork_exchangeRate",
-        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_exchangeRate\\IJ_homeWork_exchangeRate.csproj",
+        "projectUniqueName": "F:\\данил\\visual_studio_projects\\for_lean\\linq\\IJ_homeWork_criminalSearcher\\IJ_homeWork_criminalSearcher.csproj",
+        "projectName": "IJ_homeWork_criminalSearcher",
+        "projectPath": "F:\\данил\\visual_studio_projects\\for_lean\\linq\\IJ_homeWork_criminalSearcher\\IJ_homeWork_criminalSearcher.csproj",
         "packagesPath": "C:\\Users\\feaxmutch\\.nuget\\packages\\",
-        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\if_else\\IJ_homeWork_exchangeRate\\obj\\",
+        "outputPath": "F:\\данил\\visual_studio_projects\\for_lean\\linq\\IJ_homeWork_criminalSearcher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\feaxmutch\\AppData\\Roaming\\NuGet\\NuGet.Config",

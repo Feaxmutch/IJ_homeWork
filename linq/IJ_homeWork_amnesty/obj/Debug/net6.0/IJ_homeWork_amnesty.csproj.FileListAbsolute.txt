@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\bin\Debug\net6.0\IJ_homeWork_amnesty.exe
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\bin\Debug\net6.0\IJ_homeWork_amnesty.deps.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\bin\Debug\net6.0\IJ_homeWork_amnesty.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\bin\Debug\net6.0\IJ_homeWork_amnesty.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\bin\Debug\net6.0\IJ_homeWork_amnesty.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\refint\IJ_homeWork_amnesty.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\IJ_homeWork_amnesty.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_amnesty\obj\Debug\net6.0\ref\IJ_homeWork_amnesty.dll

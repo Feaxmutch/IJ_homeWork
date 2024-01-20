@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\bin\Debug\net6.0\IJ_homeWork_hospital.exe
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\bin\Debug\net6.0\IJ_homeWork_hospital.deps.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\bin\Debug\net6.0\IJ_homeWork_hospital.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\bin\Debug\net6.0\IJ_homeWork_hospital.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\bin\Debug\net6.0\IJ_homeWork_hospital.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\refint\IJ_homeWork_hospital.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\IJ_homeWork_hospital.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_hospital\obj\Debug\net6.0\ref\IJ_homeWork_hospital.dll

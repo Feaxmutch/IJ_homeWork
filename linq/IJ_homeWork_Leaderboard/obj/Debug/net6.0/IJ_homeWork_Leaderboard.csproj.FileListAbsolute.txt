@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\bin\Debug\net6.0\IJ_homeWork_Leaderboard.exe
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\bin\Debug\net6.0\IJ_homeWork_Leaderboard.deps.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\bin\Debug\net6.0\IJ_homeWork_Leaderboard.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\bin\Debug\net6.0\IJ_homeWork_Leaderboard.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\bin\Debug\net6.0\IJ_homeWork_Leaderboard.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\refint\IJ_homeWork_Leaderboard.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\IJ_homeWork_Leaderboard.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_Leaderboard\obj\Debug\net6.0\ref\IJ_homeWork_Leaderboard.dll

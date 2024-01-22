@@ -22,18 +22,22 @@
                 new("NIGGA_KillER", 91, 32)
             };
 
-            var levelLeaderboard = players.OrderByDescending(player => player.Level).ToList();
-            var strengthLeaderboard = players.OrderByDescending(player => player.Strength).ToList();
+            var topLevelPlayers = players.OrderByDescending(player => player.Level).
+                                          Take(playersInLeaderboard).
+                                          ToList();
+            var topStrengthPlayers = players.OrderByDescending(player => player.Strength).
+                                             Take(playersInLeaderboard).
+                                             ToList();
 
-            WriteLeaderboard(levelLeaderboard, playersInLeaderboard, levelLeaderboardPosition);
-            WriteLeaderboard(strengthLeaderboard, playersInLeaderboard, strengthLeaderboardPosition);
+            WriteLeaderboard(topLevelPlayers, levelLeaderboardPosition);
+            WriteLeaderboard(topStrengthPlayers, strengthLeaderboardPosition);
 
             Console.ReadKey();
         }
 
-        static void WriteLeaderboard(List<Player> players, int leaderboardCap, int leaderboardPosition)
+        static void WriteLeaderboard(List<Player> players, int leaderboardPosition)
         {
-            for (int i = 0; i < leaderboardCap; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 Console.SetCursorPosition(leaderboardPosition, i);
                 Console.Write($"name:\"{players[i].Name}\" level:{players[i].Level} strength:{players[i].Strength}");

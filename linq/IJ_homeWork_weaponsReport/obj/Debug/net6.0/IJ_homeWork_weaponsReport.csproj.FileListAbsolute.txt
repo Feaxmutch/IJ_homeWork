@@ -1,0 +1,15 @@
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\bin\Debug\net6.0\IJ_homeWork_weaponsReport.exe
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\bin\Debug\net6.0\IJ_homeWork_weaponsReport.deps.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\bin\Debug\net6.0\IJ_homeWork_weaponsReport.runtimeconfig.json
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\bin\Debug\net6.0\IJ_homeWork_weaponsReport.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\bin\Debug\net6.0\IJ_homeWork_weaponsReport.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.csproj.AssemblyReference.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.GeneratedMSBuildEditorConfig.editorconfig
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.AssemblyInfoInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.AssemblyInfo.cs
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.csproj.CoreCompileInputs.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\refint\IJ_homeWork_weaponsReport.dll
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.pdb
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\IJ_homeWork_weaponsReport.genruntimeconfig.cache
+F:\данил\visual_studio_projects\for_lean\linq\IJ_homeWork_weaponsReport\obj\Debug\net6.0\ref\IJ_homeWork_weaponsReport.dll

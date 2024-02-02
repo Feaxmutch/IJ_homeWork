@@ -34,14 +34,9 @@
                 new("Беляев"),
             };
 
-            var souldersForUnification = troop1.Where(soulder => soulder.LastName.StartsWith(unificationСondition)).ToList();
-
-            foreach (var soulder in souldersForUnification)
-            {
-                troop1.Remove(soulder);
-            }
-            
-            troop2.AddRange(souldersForUnification);
+            var souldersForUnification = troop1.Where(soulder => soulder.LastName.StartsWith(unificationСondition));
+            troop1 = troop1.Except(souldersForUnification).ToList();
+            troop2 = troop2.Union(souldersForUnification).ToList();
         }
     }
 
